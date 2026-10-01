@@ -419,7 +419,9 @@ const AI_INPUT_SPEC = {
     edges: 'Array of {from,to,branch?}. Branch defaults to "1".',
     layout: 'Optional {startX,startY,gapX} for automatic node positions.'
   },
-  output: 'Return the generator result unchanged: {name:"automa-blocks",data:{nodes:[...],edges:[...]}}. This is for pasting into an existing workflow, not importing as a standalone workflow.',
+  agentResponse: 'By default, return the simple input JSON with blocks, edges, and optional layout, followed by one short instruction for converting it. Return the generated package only when the user asks for it.',
+  output: 'The generator returns {name:"automa-blocks",data:{nodes:[...],edges:[...]}} for pasting into an existing workflow. It is not a standalone workflow export.',
+  workflowDesign: 'Use one shared loop body for repeated records, pages, or elements. Choose Loop Data or Loop Elements based on the input. Avoid duplicate actions and do not add loops without real repetition.',
   descriptions: 'Add a concise description for each block. Keep each description to 14 characters or fewer. The generator trims overlong descriptions to fit.',
   selectors: {
     findBy: ['cssSelector','xpath'],
