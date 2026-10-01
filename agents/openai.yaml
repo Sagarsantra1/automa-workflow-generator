@@ -1,0 +1,4 @@
+interface:
+  display_name: "Automa workflow generator"
+  short_description: "Build and validate Automa workflow block packages"
+  default_prompt: "Use $automa-workflow-generator to build an Automa block package for this request."
