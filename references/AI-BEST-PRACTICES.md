@@ -1,10 +1,10 @@
-# AI best practices for Automa block packages
+# AI best practices for Automa workflows
 
 Use this file with `ai-input-schema.json` and `README-automa-workflow-generator.md`. The schema and generator define which block types and fields the tool accepts. Do not add block types that they do not list.
 
 ## Output contract
 
-The AI gives the generator simple input JSON with `blocks` and `edges`. The generator returns the Automa editor package:
+Return simple input JSON with `blocks`, `edges`, and optional `layout` by default, followed by one short instruction for converting it. Return the Automa editor package only when the user asks for the paste package:
 
 ```json
 {
@@ -16,7 +16,9 @@ The AI gives the generator simple input JSON with `blocks` and `edges`. The gene
 }
 ```
 
-Return the generator result unchanged in a JSON code block. Do not wrap it in a full workflow export. Do not remove node or edge fields from the package. The editor uses fields such as node positions, handles, edge endpoints, and endpoint node data when it pastes the package.
+Do not return the editor package or a full workflow export unless the user asks for it. When they ask for the paste package, return the generator result unchanged. Do not remove node or edge fields. The editor uses fields such as node positions, handles, edge endpoints, and endpoint node data when it pastes the package.
+
+To convert simple input JSON, save it as `input.json` in the skill folder and run `node scripts/automa-workflow-generator.js input.json output.json`. The resulting package is for pasting into an existing workflow, not for importing as a standalone workflow.
 
 The package contains only the selected block group. It does not include the target workflow's settings, table, trigger, global data, or metadata. Edges can connect package nodes to each other. They cannot connect to nodes outside the package. After pasting, the user may need to connect the package's entry and exit blocks to the existing workflow.
 
@@ -40,6 +42,8 @@ When adding steps to an existing workflow, do not add a trigger unless the user 
 - For Element Exists, connect the true output with branch `true` and the false output with branch `false`. The generator maps these to Automa's output handles.
 - A Note block is a visual annotation, not an action. Do not connect it with edges. Set `noteFor` to the ID of the block it describes to place the note centered below that block.
 - Give Loop Data or Loop Elements and its Loop Breakpoint the same `loopId`. Put the breakpoint at the end of the repeated section. The loop will not repeat without a matching breakpoint.
+- Use a loop when a sequence repeats for multiple records, pages, or elements. Build one shared loop body instead of copying the same blocks for each item. Choose Loop Data for arrays, rows, numbers, or variables. Choose Loop Elements when its page element and load-more behavior fits. Do not add loops when the task has no real repetition.
+- Keep the graph compact. Reuse loop bodies, avoid duplicate actions and branches, and prefer a built-in block over custom JavaScript when both can perform the task.
 - Do not create new `blocks-group` nodes as workflow actions. Preserve a supplied group and its nested data when editing an existing workflow that contains one.
 
 ## Selectors and browser timing
@@ -161,14 +165,13 @@ Text held in a workflow variable:
 - If JavaScript code calls `automaNextBlock`, make sure every execution path reaches the intended continuation. Do not combine automatic continuation with manual continuation unless the code requires it.
 - Never put passwords, API keys, cookies, or access tokens in block data. Use a user-configured Automa variable or global data reference and tell the user what value they must configure.
 
-## Run the generator and deliver the result
+## Build the simple input and generate a paste package when requested
 
 1. Build the smallest simple JSON input that captures the requested block group.
-2. Run the JavaScript generator.
-3. If it reports an error, use the message to fix the simple input and run it again. Do not hand-edit the generated package to hide an error.
-4. Confirm the result has `name: "automa-blocks"`, a `data.nodes` array, and a `data.edges` array.
-5. Confirm each edge points to nodes in the package, all branch IDs exist, loop IDs match, and descriptions are short.
-6. Return the package unchanged in one JSON code block. Add a Note below every table-writing block. Keep any other setup instruction outside the JSON and state only what the user needs to do before running it.
+2. Check that each edge refers to known block IDs, branch IDs are valid, loop IDs match, and descriptions are short.
+3. Return the simple JSON input in one `json` code block, followed by one short instruction for converting it. Add a Note below each table-writing block in the `blocks` array.
+4. If the user asks for a paste package, run `node scripts/automa-workflow-generator.js input.json output.json`. Fix any reported input errors and run it again. Do not hand-edit the generated package to hide an error.
+5. For a requested paste package, confirm it has `name: "automa-blocks"`, `data.nodes`, and `data.edges`, then return it unchanged. Remind the user that they can paste it into an existing workflow. It is not a standalone workflow export.
 
 ## Automa references
 

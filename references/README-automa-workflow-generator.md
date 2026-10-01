@@ -1373,17 +1373,16 @@ Then run the generator.
 
 When an AI receives a natural-language automation request:
 
-1. Identify the actions in execution order.
+1. Identify the actions in execution order and find any real repeated work.
 2. Choose the smallest Automa block that performs each action.
-3. Give every block a unique short ID.
-4. Add only parameters that are relevant to the selected block options.
-5. Give each block a short description of 14 characters or fewer.
-6. Create edges between blocks.
-7. Add `branch` for Conditions, Element Exists, and While Loop outputs.
-8. Give related loop blocks the same `loopId`.
-9. Validate enum values against this README or `--schema`.
-10. Run the generator with the simple input JSON.
-11. Return the generated `automa-blocks` package unchanged in a code block.
+3. Use one loop body for repeated records, pages, or elements. Do not copy the same steps for each item or add a loop when there is no repetition.
+4. Give every block a unique short ID and a description of 14 characters or fewer.
+5. Add only relevant settings and connect the blocks with edges.
+6. Add `branch` for Conditions, Element Exists, and While Loop outputs.
+7. Give related loop blocks the same `loopId` and place the breakpoint at the end of the repeated steps.
+8. Validate enum values against this README or `--schema`.
+9. Return the simple input JSON with `blocks`, `edges`, and optional `layout` in a code block. Follow it with one short instruction to save it as `input.json` and run `node scripts/automa-workflow-generator.js input.json output.json`.
+10. Return the generated `automa-blocks` package unchanged only when the user asks for the paste package. It is for an existing workflow, not a standalone workflow export.
 
 ## 13. Validation behavior
 
