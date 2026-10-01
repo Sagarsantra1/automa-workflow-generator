@@ -1,0 +1,589 @@
+{
+  "purpose": "Convert simple workflow input JSON into an Automa editor block package for pasting into an existing workflow.",
+  "input": {
+    "blocks": "Array of block objects. Each block should have a unique id and type. Optional label, description, data, and position. Note blocks may also use noteFor.",
+    "edges": "Array of {from,to,branch?}. Branch defaults to \"1\".",
+    "layout": "Optional {startX,startY,gapX} for automatic node positions."
+  },
+  "output": "Return the generator result unchanged: {name:\"automa-blocks\",data:{nodes:[...],edges:[...]}}. This is for pasting into an existing workflow, not importing as a standalone workflow.",
+  "descriptions": "Add a concise description for each block. Keep each description to 14 characters or fewer. The generator trims overlong descriptions to fit.",
+  "selectors": {
+    "findBy": [
+      "cssSelector",
+      "xpath"
+    ],
+    "conditional": {
+      "waitForSelector": "When true, waitSelectorTimeout is used.",
+      "markEl": "Used only with cssSelector."
+    }
+  },
+  "blocks": {
+    "trigger": {
+      "fields": [
+        "data.type",
+        "data.interval",
+        "data.delay",
+        "data.date",
+        "data.time",
+        "data.url",
+        "data.shortcut",
+        "data.days",
+        "data.contextMenuName",
+        "data.contextTypes",
+        "data.parameters",
+        "data.preferParamsInTab",
+        "data.observeElement"
+      ]
+    },
+    "active-tab": {
+      "fields": []
+    },
+    "note": {
+      "fields": [
+        "data.note",
+        "data.color",
+        "data.fontSize",
+        "data.width",
+        "data.height"
+      ],
+      "positioning": "Set noteFor to a block ID to center the note below that block. The generator shifts notes down to avoid overlapping other nodes. Notes are visual annotations and do not connect to workflow edges."
+    },
+    "blocks-group": {
+      "fields": [
+        "data.name",
+        "data.blocks"
+      ],
+      "note": "When editing an existing workflow, preserve this data as supplied. Its nested blocks use Automa block data."
+    },
+    "event-click": {
+      "selector": true,
+      "fields": [
+        "data.findBy",
+        "data.selector",
+        "data.waitForSelector",
+        "data.waitSelectorTimeout",
+        "data.markEl",
+        "data.multiple"
+      ]
+    },
+    "get-text": {
+      "selector": true,
+      "fields": [
+        "data.findBy",
+        "data.selector",
+        "data.regex",
+        "data.regexExp",
+        "data.prefixText",
+        "data.suffixText",
+        "data.includeTags",
+        "data.useTextContent",
+        "data.saveData",
+        "data.dataColumn",
+        "data.assignVariable",
+        "data.variableName",
+        "data.addExtraRow",
+        "data.extraRowValue",
+        "data.extraRowDataColumn"
+      ]
+    },
+    "forms": {
+      "selector": true,
+      "fields": [
+        "data.type"
+      ],
+      "conditional": {
+        "text-field": [
+          "data.value",
+          "data.clearValue",
+          "data.delay"
+        ],
+        "select": [
+          "data.selectOptionBy"
+        ],
+        "selectOptionBy=value": [
+          "data.value",
+          "data.clearValue"
+        ],
+        "selectOptionBy=first-option": [],
+        "selectOptionBy=last-option": [],
+        "selectOptionBy=custom-position": [
+          "data.optionPosition"
+        ],
+        "checkbox": [
+          "data.selected"
+        ],
+        "radio": [
+          "data.selected"
+        ]
+      }
+    },
+    "conditions": {
+      "fields": [
+        "paths",
+        "data.retryConditions",
+        "data.retryCount",
+        "data.retryTimeout"
+      ],
+      "conditionPath": "paths[] = {id,name?,conditions:[]}"
+    },
+    "delay": {
+      "fields": [
+        "data.time"
+      ]
+    },
+    "javascript-code": {
+      "fields": [
+        "data.code",
+        "data.timeout",
+        "data.context",
+        "data.everyNewTab",
+        "data.runBeforeLoad",
+        "data.preloadScripts"
+      ],
+      "conditional": {
+        "everyNewTab=false": [
+          "data.context"
+        ],
+        "everyNewTab=true": [
+          "data.context? optional by editor state"
+        ]
+      }
+    },
+    "loop-elements": {
+      "selector": true,
+      "fields": [
+        "data.loopId",
+        "data.selector",
+        "data.findBy",
+        "data.waitForSelector",
+        "data.waitSelectorTimeout",
+        "data.maxLoop",
+        "data.reverseLoop",
+        "data.loadMoreAction"
+      ],
+      "conditional": {
+        "loadMoreAction=click-element": [
+          "data.actionElSelector",
+          "data.actionElMaxWaitTime"
+        ],
+        "loadMoreAction=click-link": [
+          "data.actionElSelector",
+          "data.actionElMaxWaitTime",
+          "data.actionPageMaxWaitTime"
+        ],
+        "loadMoreAction=scroll": [
+          "data.actionElMaxWaitTime",
+          "data.scrollToBottom"
+        ],
+        "loadMoreAction=scroll-up": [
+          "data.actionElMaxWaitTime",
+          "data.scrollToBottom"
+        ],
+        "loadMoreAction=none": []
+      }
+    },
+    "loop-data": {
+      "fields": [
+        "data.loopId",
+        "data.loopThrough",
+        "data.maxLoop",
+        "data.startIndex",
+        "data.resumeLastWorkflow",
+        "data.reverseLoop"
+      ],
+      "conditional": {
+        "loopThrough=data-columns": [],
+        "loopThrough=numbers": [
+          "data.fromNumber",
+          "data.toNumber"
+        ],
+        "loopThrough=google-sheets": [
+          "data.referenceKey"
+        ],
+        "loopThrough=variable": [
+          "data.variableName"
+        ],
+        "loopThrough=custom-data": [
+          "data.loopData"
+        ],
+        "loopThrough=elements": [
+          "data.elementSelector",
+          "data.waitForSelector",
+          "data.waitSelectorTimeout"
+        ]
+      }
+    },
+    "new-tab": {
+      "fields": [
+        "data.url",
+        "data.active",
+        "data.waitTabLoaded",
+        "data.updatePrevTab",
+        "data.inGroup",
+        "data.customUserAgent",
+        "data.userAgent",
+        "data.tabZoom"
+      ],
+      "conditional": {
+        "active=false": [
+          "data.url"
+        ],
+        "customUserAgent=true": [
+          "data.userAgent"
+        ]
+      }
+    },
+    "switch-tab": {
+      "fields": [
+        "data.findTabBy",
+        "data.createIfNoMatch",
+        "data.activeTab"
+      ],
+      "conditional": {
+        "findTabBy=match-patterns": [
+          "data.matchPattern"
+        ],
+        "findTabBy=tab-title": [
+          "data.tabTitle"
+        ],
+        "findTabBy=next-tab": [],
+        "findTabBy=prev-tab": [],
+        "findTabBy=tab-index": [
+          "data.tabIndex"
+        ],
+        "createIfNoMatch=true with match-patterns/tab-title": [
+          "data.url"
+        ]
+      }
+    },
+    "data-mapping": {
+      "fields": [
+        "data.dataSource",
+        "data.sources",
+        "data.assignVariable",
+        "data.variableName",
+        "data.saveData",
+        "data.dataColumn"
+      ],
+      "conditional": {
+        "dataSource=variable": [
+          "data.varSourceName"
+        ],
+        "dataSource=table": [
+          "data.sources"
+        ]
+      }
+    },
+    "insert-data": {
+      "fields": [
+        "data.dataList"
+      ]
+    },
+    "element-exists": {
+      "selector": true,
+      "outputs": {
+        "true": "1",
+        "false": "2"
+      },
+      "fields": [
+        "data.findBy",
+        "data.selector",
+        "data.tryCount",
+        "data.timeout",
+        "data.throwError"
+      ]
+    },
+    "http-request": {
+      "alias": "webhook",
+      "fields": [
+        "data.method",
+        "data.url",
+        "data.contentType",
+        "data.timeout",
+        "data.headers",
+        "data.body",
+        "data.responseType",
+        "data.dataPath",
+        "data.variableName",
+        "data.assignVariable",
+        "data.saveData",
+        "data.dataColumn"
+      ],
+      "conditional": {
+        "method=GET or HEAD": [
+          "data.body? not needed by editor"
+        ],
+        "responseType=json": [
+          "data.dataPath"
+        ]
+      }
+    },
+    "while-loop": {
+      "fields": [
+        "data.conditions",
+        "data.retryConditions",
+        "data.retryCount",
+        "data.retryTimeout"
+      ],
+      "outputs": [
+        "1",
+        "fallback"
+      ],
+      "conditionPath": "data.conditions[]"
+    },
+    "notification": {
+      "fields": [
+        "data.title",
+        "data.message",
+        "data.iconUrl",
+        "data.imageUrl"
+      ]
+    },
+    "execute-workflow": {
+      "fields": [
+        "data.workflowId",
+        "data.executeId",
+        "data.insertAllGlobalData",
+        "data.globalData",
+        "data.insertAllVars",
+        "data.insertVars"
+      ]
+    },
+    "press-key": {
+      "fields": [
+        "data.selector",
+        "data.action",
+        "data.pressTime"
+      ],
+      "conditional": {
+        "action=press-key": [
+          "data.keys"
+        ],
+        "action=multiple-keys": [
+          "data.keysToPress"
+        ]
+      }
+    },
+    "element-scroll": {
+      "selector": true,
+      "fields": [
+        "data.selector",
+        "data.findBy",
+        "data.scrollY",
+        "data.scrollX",
+        "data.incX",
+        "data.incY",
+        "data.smooth",
+        "data.scrollIntoView"
+      ]
+    },
+    "attribute-value": {
+      "selector": true,
+      "fields": [
+        "data.findBy",
+        "data.selector",
+        "data.action",
+        "data.attributeName"
+      ],
+      "conditional": {
+        "action=get": [
+          "data.assignVariable",
+          "data.variableName",
+          "data.saveData",
+          "data.dataColumn"
+        ],
+        "action=set": [
+          "data.attributeValue"
+        ]
+      }
+    },
+    "new-window": {
+      "fields": [
+        "data.type",
+        "data.url",
+        "data.windowState",
+        "data.incognito"
+      ],
+      "conditional": {
+        "windowState=normal": [
+          "data.top",
+          "data.left",
+          "data.height",
+          "data.width"
+        ]
+      }
+    },
+    "upload-file": {
+      "selector": true,
+      "fields": [
+        "data.findBy",
+        "data.selector",
+        "data.filePaths"
+      ]
+    },
+    "handle-download": {
+      "fields": [
+        "data.timeout",
+        "data.downloadId",
+        "data.waitForDownload"
+      ],
+      "conditional": {
+        "downloadId empty": [
+          "data.filename",
+          "data.onConflict"
+        ],
+        "waitForDownload=true": [
+          "data.saveData",
+          "data.dataColumn",
+          "data.assignVariable",
+          "data.variableName"
+        ]
+      }
+    },
+    "take-screenshot": {
+      "fields": [
+        "data.type",
+        "data.saveToComputer",
+        "data.saveToColumn",
+        "data.assignVariable",
+        "data.ext",
+        "data.fileName"
+      ],
+      "conditional": {
+        "type=element": [
+          "data.selector"
+        ],
+        "ext=jpeg": [
+          "data.quality"
+        ],
+        "saveToComputer=true": [
+          "data.fileName",
+          "data.ext"
+        ],
+        "saveToColumn=true": [
+          "data.dataColumn"
+        ],
+        "assignVariable=true": [
+          "data.variableName"
+        ]
+      }
+    },
+    "increase-variable": {
+      "fields": [
+        "data.variableName",
+        "data.increaseBy"
+      ]
+    },
+    "clipboard": {
+      "fields": [
+        "data.type"
+      ],
+      "conditional": {
+        "type=get": [
+          "data.assignVariable",
+          "data.variableName",
+          "data.saveData",
+          "data.dataColumn"
+        ],
+        "type=insert": [
+          "data.dataToCopy",
+          "data.copySelectedText"
+        ]
+      }
+    },
+    "loop-breakpoint": {
+      "fields": [
+        "data.loopId",
+        "data.clearLoop"
+      ]
+    },
+    "go-back": {
+      "fields": []
+    },
+    "forward-page": {
+      "fields": []
+    },
+    "close-tab": {
+      "fields": [
+        "data.closeType"
+      ],
+      "conditional": {
+        "closeType=tab": [
+          "data.activeTab",
+          "data.url when activeTab=false"
+        ],
+        "closeType=window": [
+          "data.allWindows"
+        ]
+      }
+    },
+    "browser-event": {
+      "fields": [
+        "data.eventName",
+        "data.timeout",
+        "data.setAsActiveTab",
+        "data.activeTabLoaded",
+        "data.tabLoadedUrl",
+        "data.tabUrl",
+        "data.fileQuery"
+      ]
+    },
+    "export-data": {
+      "fields": [
+        "data.name",
+        "data.refKey",
+        "data.type",
+        "data.variableName",
+        "data.csvDelimiter",
+        "data.addBOMHeader",
+        "data.onConflict",
+        "data.dataToExport"
+      ]
+    }
+  },
+  "graph": {
+    "normal": "branch omitted or branch=\"1\"",
+    "conditions": "branch must equal a path id, or \"fallback\"",
+    "elementExists": "branch=true maps to output 1; branch=false maps to output 2",
+    "whileLoop": "use branch=\"1\" for the loop body and branch=\"fallback\" for exit",
+    "loops": "use the same loopId for loop-data/loop-elements and loop-breakpoint. To repeat, connect the breakpoint back to the desired loop block.",
+    "notes": "Note blocks are visual only. Use noteFor with a block ID to place a note below that block. Do not connect notes with edges."
+  },
+  "aliases": {
+    "click": "event-click",
+    "event-click": "event-click",
+    "get-text": "get-text",
+    "getText": "get-text",
+    "javascript": "javascript-code",
+    "javascript-code": "javascript-code",
+    "loop-elements": "loop-elements",
+    "loop-data": "loop-data",
+    "new-tab": "new-tab",
+    "switch-tab": "switch-tab",
+    "data-mapping": "data-mapping",
+    "insert-data": "insert-data",
+    "element-exists": "element-exists",
+    "element exists": "element-exists",
+    "http-request": "webhook",
+    "webhook": "webhook",
+    "while-loop": "while-loop",
+    "notification": "notification",
+    "execute-workflow": "execute-workflow",
+    "press-key": "press-key",
+    "element-scroll": "element-scroll",
+    "attribute-value": "attribute-value",
+    "new-window": "new-window",
+    "upload-file": "upload-file",
+    "handle-download": "handle-download",
+    "take-screenshot": "take-screenshot",
+    "increase-variable": "increase-variable",
+    "clipboard": "clipboard",
+    "forms": "forms",
+    "delay": "delay",
+    "trigger": "trigger",
+    "active-tab": "active-tab",
+    "loop-breakpoint": "loop-breakpoint",
+    "blocks-group": "blocks-group",
+    "note": "note"
+  }
+}
