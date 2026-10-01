@@ -1,0 +1,301 @@
+{
+  "blocks": [
+    {
+      "id": "n3hjous",
+      "type": "get-text",
+      "description": "Get chapter",
+      "data": {
+        "addExtraRow": false,
+        "assignVariable": false,
+        "dataColumn": "Wz7Va",
+        "description": "Get chapter",
+        "disableBlock": false,
+        "extraRowDataColumn": "",
+        "extraRowValue": "",
+        "findBy": "cssSelector",
+        "includeTags": false,
+        "markEl": false,
+        "multiple": false,
+        "prefixText": "",
+        "regex": "",
+        "regexExp": [],
+        "saveData": true,
+        "selector": "div.txt h4",
+        "suffixText": "",
+        "useTextContent": false,
+        "variableName": "",
+        "waitForSelector": true,
+        "waitSelectorTimeout": 10000
+      },
+      "position": {
+        "x": 1328,
+        "y": 36
+      }
+    },
+    {
+      "id": "mvey9xk",
+      "type": "active-tab",
+      "description": "Use tab",
+      "data": {
+        "disableBlock": false,
+        "description": "Use tab"
+      },
+      "position": {
+        "x": 388,
+        "y": 97
+      }
+    },
+    {
+      "id": "vdby1vt",
+      "type": "javascript-code",
+      "description": "Format text",
+      "data": {
+        "code": "// Select all paragraphs in div.txt\nconst nodes = Array.from(document.querySelectorAll(\"div.txt p\"));\n\n// Filter out translator/editor lines, empties, and the specified novel promotion line\nconst filteredList = nodes\n  .map(p => p.innerText.trim())\n  .filter(t => \n    t && \n    !t.startsWith(\"Translator:\") && \n    !t.startsWith(\"Editor:\") && \n    t !== \"Visit and read more novel to help us update chapter quickly. Thank you so much!\"\n  );\n\n// FORMAT THE DATA: Join the array into a single string with double newlines\n// Use '\\n' for single spacing or '\\n\\n' for paragraph spacing\nconst formattedText = filteredList.join('\\n\\n');\n\n// Save the cleaned, formatted string to the variable\nautomaSetVariable('filteredText', formattedText);",
+        "context": "website",
+        "description": "Format text",
+        "disableBlock": false,
+        "everyNewTab": false,
+        "preloadScripts": [],
+        "runBeforeLoad": false,
+        "timeout": 20000
+      },
+      "position": {
+        "x": 1620,
+        "y": 97
+      }
+    },
+    {
+      "id": "65a9jj4",
+      "type": "insert-data",
+      "description": "Save text",
+      "data": {
+        "dataList": [
+          {
+            "action": "default",
+            "filePath": "",
+            "isFile": false,
+            "name": "13sto",
+            "type": "table",
+            "value": "{{ variables@filteredText }}"
+          }
+        ],
+        "description": "Save text",
+        "disableBlock": false
+      },
+      "position": {
+        "x": 1912,
+        "y": 97
+      }
+    },
+    {
+      "id": "k2iewl4",
+      "type": "event-click",
+      "description": "Next chapter",
+      "data": {
+        "description": "Next chapter",
+        "disableBlock": false,
+        "findBy": "cssSelector",
+        "markEl": false,
+        "multiple": false,
+        "selector": "li > a[title=\"Read Next Chapter\"]",
+        "waitForSelector": false,
+        "waitSelectorTimeout": 5000
+      },
+      "position": {
+        "x": 2204,
+        "y": 97
+      }
+    },
+    {
+      "id": "21cag2k",
+      "type": "loop-data",
+      "description": "Loop pages",
+      "data": {
+        "description": "Loop pages",
+        "disableBlock": false,
+        "elementSelector": "",
+        "fromNumber": 1,
+        "loopData": "[]",
+        "loopId": "KqwRI5",
+        "loopThrough": "numbers",
+        "maxLoop": 0,
+        "referenceKey": "",
+        "resumeLastWorkflow": false,
+        "reverseLoop": false,
+        "startIndex": 0,
+        "toNumber": 200,
+        "variableName": "",
+        "waitForSelector": false,
+        "waitSelectorTimeout": 5000
+      },
+      "position": {
+        "x": 680,
+        "y": 97
+      },
+      "loopId": "KqwRI5"
+    },
+    {
+      "id": "4he22vc",
+      "type": "loop-breakpoint",
+      "description": "Repeat",
+      "data": {
+        "clearLoop": false,
+        "disableBlock": false,
+        "loopId": "KqwRI5",
+        "description": "Repeat"
+      },
+      "position": {
+        "x": 2496,
+        "y": 97
+      },
+      "loopId": "KqwRI5"
+    },
+    {
+      "id": "h9s56cl",
+      "type": "conditions",
+      "description": "Check page",
+      "data": {
+        "conditions": [
+          {
+            "conditions": [
+              {
+                "conditions": [
+                  {
+                    "id": "hsJqhAXHLMbSfB2bEFVp7",
+                    "items": [
+                      {
+                        "category": "value",
+                        "data": {
+                          "selector": "div.txt h4"
+                        },
+                        "id": "Pae631wSXUYQe2JUBDbUi",
+                        "type": "element#exists"
+                      }
+                    ]
+                  }
+                ],
+                "id": "B_uDKXrO0N4nSLdK9anmK"
+              }
+            ],
+            "id": "qmT9qYfNyjNEEdRTVSLFJ",
+            "name": "Path 1"
+          }
+        ],
+        "description": "Check page",
+        "disableBlock": false,
+        "retryConditions": false,
+        "retryCount": 10,
+        "retryTimeout": 1000
+      },
+      "position": {
+        "x": 999.7040715562939,
+        "y": 49.74478711923214
+      },
+      "paths": [
+        {
+          "conditions": [
+            {
+              "conditions": [
+                {
+                  "id": "hsJqhAXHLMbSfB2bEFVp7",
+                  "items": [
+                    {
+                      "category": "value",
+                      "data": {
+                        "selector": "div.txt h4"
+                      },
+                      "id": "Pae631wSXUYQe2JUBDbUi",
+                      "type": "element#exists"
+                    }
+                  ]
+                }
+              ],
+              "id": "B_uDKXrO0N4nSLdK9anmK"
+            }
+          ],
+          "id": "qmT9qYfNyjNEEdRTVSLFJ",
+          "name": "Path 1"
+        }
+      ]
+    },
+    {
+      "id": "iywfud9",
+      "type": "get-text",
+      "description": "Get title",
+      "data": {
+        "addExtraRow": false,
+        "assignVariable": false,
+        "dataColumn": "Wz7Va",
+        "description": "Get title",
+        "disableBlock": false,
+        "extraRowDataColumn": "",
+        "extraRowValue": "",
+        "findBy": "cssSelector",
+        "includeTags": false,
+        "markEl": false,
+        "multiple": false,
+        "prefixText": "",
+        "regex": "",
+        "regexExp": [],
+        "saveData": true,
+        "selector": "span.chapter",
+        "suffixText": "",
+        "useTextContent": false,
+        "variableName": "",
+        "waitForSelector": true,
+        "waitSelectorTimeout": 10000
+      },
+      "position": {
+        "x": 1326.8062638390268,
+        "y": 159.19373616097312
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "vdby1vt",
+      "to": "65a9jj4",
+      "branch": "1"
+    },
+    {
+      "from": "n3hjous",
+      "to": "vdby1vt",
+      "branch": "1"
+    },
+    {
+      "from": "65a9jj4",
+      "to": "k2iewl4",
+      "branch": "1"
+    },
+    {
+      "from": "mvey9xk",
+      "to": "21cag2k",
+      "branch": "1"
+    },
+    {
+      "from": "k2iewl4",
+      "to": "4he22vc",
+      "branch": "1"
+    },
+    {
+      "from": "h9s56cl",
+      "to": "n3hjous",
+      "branch": "qmT9qYfNyjNEEdRTVSLFJ"
+    },
+    {
+      "from": "h9s56cl",
+      "to": "iywfud9",
+      "branch": "fallback"
+    },
+    {
+      "from": "iywfud9",
+      "to": "vdby1vt",
+      "branch": "1"
+    },
+    {
+      "from": "21cag2k",
+      "to": "h9s56cl",
+      "branch": "1"
+    }
+  ]
+}

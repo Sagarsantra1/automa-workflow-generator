@@ -1,0 +1,2035 @@
+{
+  "name": "automa-blocks",
+  "data": {
+    "nodes": [
+      {
+        "id": "n3hjous",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 1328,
+          "y": 36,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "n3hjous-output-1",
+              "position": "right",
+              "nodeId": "n3hjous",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "n3hjous-input-1",
+              "position": "left",
+              "nodeId": "n3hjous",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 1328,
+          "y": 36
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Get chapter",
+          "findBy": "cssSelector",
+          "waitForSelector": true,
+          "waitSelectorTimeout": 10000,
+          "selector": "div.txt h4",
+          "markEl": false,
+          "multiple": false,
+          "regex": "",
+          "prefixText": "",
+          "suffixText": "",
+          "regexExp": [],
+          "dataColumn": "Wz7Va",
+          "saveData": true,
+          "includeTags": false,
+          "addExtraRow": false,
+          "assignVariable": false,
+          "useTextContent": false,
+          "variableName": "",
+          "extraRowValue": "",
+          "extraRowDataColumn": ""
+        },
+        "events": {},
+        "label": "get-text"
+      },
+      {
+        "id": "mvey9xk",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 388,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "mvey9xk-output-1",
+              "position": "right",
+              "nodeId": "mvey9xk",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "mvey9xk-input-1",
+              "position": "left",
+              "nodeId": "mvey9xk",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 388,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Use tab"
+        },
+        "events": {},
+        "label": "active-tab"
+      },
+      {
+        "id": "vdby1vt",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 1620,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "vdby1vt-output-1",
+              "position": "right",
+              "nodeId": "vdby1vt",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "vdby1vt-input-1",
+              "position": "left",
+              "nodeId": "vdby1vt",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 1620,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Format text",
+          "timeout": 20000,
+          "context": "website",
+          "code": "// Select all paragraphs in div.txt\nconst nodes = Array.from(document.querySelectorAll(\"div.txt p\"));\n\n// Filter out translator/editor lines, empties, and the specified novel promotion line\nconst filteredList = nodes\n  .map(p => p.innerText.trim())\n  .filter(t => \n    t && \n    !t.startsWith(\"Translator:\") && \n    !t.startsWith(\"Editor:\") && \n    t !== \"Visit and read more novel to help us update chapter quickly. Thank you so much!\"\n  );\n\n// FORMAT THE DATA: Join the array into a single string with double newlines\n// Use '\\n' for single spacing or '\\n\\n' for paragraph spacing\nconst formattedText = filteredList.join('\\n\\n');\n\n// Save the cleaned, formatted string to the variable\nautomaSetVariable('filteredText', formattedText);",
+          "preloadScripts": [],
+          "everyNewTab": false,
+          "runBeforeLoad": false
+        },
+        "events": {},
+        "label": "javascript-code"
+      },
+      {
+        "id": "65a9jj4",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 1912,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "65a9jj4-output-1",
+              "position": "right",
+              "nodeId": "65a9jj4",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "65a9jj4-input-1",
+              "position": "left",
+              "nodeId": "65a9jj4",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 1912,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Save text",
+          "dataList": [
+            {
+              "action": "default",
+              "filePath": "",
+              "isFile": false,
+              "name": "13sto",
+              "type": "table",
+              "value": "{{ variables@filteredText }}"
+            }
+          ]
+        },
+        "events": {},
+        "label": "insert-data"
+      },
+      {
+        "id": "k2iewl4",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 2204,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "k2iewl4-output-1",
+              "position": "right",
+              "nodeId": "k2iewl4",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "k2iewl4-input-1",
+              "position": "left",
+              "nodeId": "k2iewl4",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 2204,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Next chapter",
+          "findBy": "cssSelector",
+          "waitForSelector": false,
+          "waitSelectorTimeout": 5000,
+          "selector": "li > a[title=\"Read Next Chapter\"]",
+          "markEl": false,
+          "multiple": false
+        },
+        "events": {},
+        "label": "event-click"
+      },
+      {
+        "id": "21cag2k",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 680,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "21cag2k-output-1",
+              "position": "right",
+              "nodeId": "21cag2k",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "21cag2k-input-1",
+              "position": "left",
+              "nodeId": "21cag2k",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 680,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "loopId": "KqwRI5",
+          "maxLoop": 0,
+          "toNumber": 200,
+          "fromNumber": 1,
+          "startIndex": 0,
+          "loopData": "[]",
+          "description": "Loop pages",
+          "variableName": "",
+          "referenceKey": "",
+          "reverseLoop": false,
+          "elementSelector": "",
+          "waitForSelector": false,
+          "waitSelectorTimeout": 5000,
+          "resumeLastWorkflow": false,
+          "loopThrough": "numbers"
+        },
+        "events": {},
+        "label": "loop-data"
+      },
+      {
+        "id": "4he22vc",
+        "type": "BlockLoopBreakpoint",
+        "dimensions": {
+          "width": 192,
+          "height": 151
+        },
+        "computedPosition": {
+          "x": 2496,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "4he22vc-output-1",
+              "position": "right",
+              "nodeId": "4he22vc",
+              "type": "source",
+              "x": 200,
+              "y": 67.5,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "4he22vc-input-1",
+              "position": "left",
+              "nodeId": "4he22vc",
+              "type": "target",
+              "x": -24,
+              "y": 67.5,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 2496,
+          "y": 97
+        },
+        "data": {
+          "clearLoop": false,
+          "disableBlock": false,
+          "loopId": "KqwRI5",
+          "description": "Repeat"
+        },
+        "events": {},
+        "label": "loop-breakpoint"
+      },
+      {
+        "id": "h9s56cl",
+        "type": "BlockConditions",
+        "dimensions": {
+          "width": 256,
+          "height": 157
+        },
+        "computedPosition": {
+          "x": 999.7040715562939,
+          "y": 49.74478711923214,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "h9s56cl-output-qmT9qYfNyjNEEdRTVSLFJ",
+              "position": "right",
+              "nodeId": "h9s56cl",
+              "type": "source",
+              "x": 264,
+              "y": 18,
+              "width": 16,
+              "height": 16
+            },
+            {
+              "id": "h9s56cl-output-fallback",
+              "position": "right",
+              "nodeId": "h9s56cl",
+              "type": "source",
+              "x": 264,
+              "y": 60,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "h9s56cl-input-1",
+              "position": "left",
+              "nodeId": "h9s56cl",
+              "type": "target",
+              "x": -24,
+              "y": 70.5,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 999.7040715562939,
+          "y": 49.74478711923214
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Check page",
+          "conditions": [
+            {
+              "id": "qmT9qYfNyjNEEdRTVSLFJ",
+              "name": "Path 1",
+              "conditions": [
+                {
+                  "conditions": [
+                    {
+                      "id": "hsJqhAXHLMbSfB2bEFVp7",
+                      "items": [
+                        {
+                          "category": "value",
+                          "data": {
+                            "selector": "div.txt h4"
+                          },
+                          "id": "Pae631wSXUYQe2JUBDbUi",
+                          "type": "element#exists"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "B_uDKXrO0N4nSLdK9anmK"
+                }
+              ]
+            }
+          ],
+          "retryConditions": false,
+          "retryCount": 10,
+          "retryTimeout": 1000
+        },
+        "events": {},
+        "label": "conditions"
+      },
+      {
+        "id": "iywfud9",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 1326.8062638390268,
+          "y": 159.19373616097312,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "iywfud9-output-1",
+              "position": "right",
+              "nodeId": "iywfud9",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "iywfud9-input-1",
+              "position": "left",
+              "nodeId": "iywfud9",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 1326.8062638390268,
+          "y": 159.19373616097312
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Get title",
+          "findBy": "cssSelector",
+          "waitForSelector": true,
+          "waitSelectorTimeout": 10000,
+          "selector": "span.chapter",
+          "markEl": false,
+          "multiple": false,
+          "regex": "",
+          "prefixText": "",
+          "suffixText": "",
+          "regexExp": [],
+          "dataColumn": "Wz7Va",
+          "saveData": true,
+          "includeTags": false,
+          "addExtraRow": false,
+          "assignVariable": false,
+          "useTextContent": false,
+          "variableName": "",
+          "extraRowValue": "",
+          "extraRowDataColumn": ""
+        },
+        "events": {},
+        "label": "get-text"
+      }
+    ],
+    "edges": [
+      {
+        "id": "vueflow__edge-vdby1vtvdby1vt-output-1-65a9jj465a9jj4-input-1",
+        "type": "custom",
+        "source": "vdby1vt",
+        "target": "65a9jj4",
+        "sourceHandle": "vdby1vt-output-1",
+        "targetHandle": "65a9jj4-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 1836,
+        "sourceY": 133,
+        "targetX": 1896,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "vdby1vt",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 1620,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "vdby1vt-output-1",
+                "position": "right",
+                "nodeId": "vdby1vt",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "vdby1vt-input-1",
+                "position": "left",
+                "nodeId": "vdby1vt",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 1620,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Format text",
+            "timeout": 20000,
+            "context": "website",
+            "code": "// Select all paragraphs in div.txt\nconst nodes = Array.from(document.querySelectorAll(\"div.txt p\"));\n\n// Filter out translator/editor lines, empties, and the specified novel promotion line\nconst filteredList = nodes\n  .map(p => p.innerText.trim())\n  .filter(t => \n    t && \n    !t.startsWith(\"Translator:\") && \n    !t.startsWith(\"Editor:\") && \n    t !== \"Visit and read more novel to help us update chapter quickly. Thank you so much!\"\n  );\n\n// FORMAT THE DATA: Join the array into a single string with double newlines\n// Use '\\n' for single spacing or '\\n\\n' for paragraph spacing\nconst formattedText = filteredList.join('\\n\\n');\n\n// Save the cleaned, formatted string to the variable\nautomaSetVariable('filteredText', formattedText);",
+            "preloadScripts": [],
+            "everyNewTab": false,
+            "runBeforeLoad": false
+          },
+          "events": {},
+          "label": "javascript-code"
+        },
+        "targetNode": {
+          "id": "65a9jj4",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 1912,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "65a9jj4-output-1",
+                "position": "right",
+                "nodeId": "65a9jj4",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "65a9jj4-input-1",
+                "position": "left",
+                "nodeId": "65a9jj4",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 1912,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Save text",
+            "dataList": [
+              {
+                "action": "default",
+                "filePath": "",
+                "isFile": false,
+                "name": "13sto",
+                "type": "table",
+                "value": "{{ variables@filteredText }}"
+              }
+            ]
+          },
+          "events": {},
+          "label": "insert-data"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-n3hjousn3hjous-output-1-vdby1vtvdby1vt-input-1",
+        "type": "custom",
+        "source": "n3hjous",
+        "target": "vdby1vt",
+        "sourceHandle": "n3hjous-output-1",
+        "targetHandle": "vdby1vt-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 1544,
+        "sourceY": 72,
+        "targetX": 1604,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "n3hjous",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 1328,
+            "y": 36,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "n3hjous-output-1",
+                "position": "right",
+                "nodeId": "n3hjous",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "n3hjous-input-1",
+                "position": "left",
+                "nodeId": "n3hjous",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 1328,
+            "y": 36
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Get chapter",
+            "findBy": "cssSelector",
+            "waitForSelector": true,
+            "waitSelectorTimeout": 10000,
+            "selector": "div.txt h4",
+            "markEl": false,
+            "multiple": false,
+            "regex": "",
+            "prefixText": "",
+            "suffixText": "",
+            "regexExp": [],
+            "dataColumn": "Wz7Va",
+            "saveData": true,
+            "includeTags": false,
+            "addExtraRow": false,
+            "assignVariable": false,
+            "useTextContent": false,
+            "variableName": "",
+            "extraRowValue": "",
+            "extraRowDataColumn": ""
+          },
+          "events": {},
+          "label": "get-text"
+        },
+        "targetNode": {
+          "id": "vdby1vt",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 1620,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "vdby1vt-output-1",
+                "position": "right",
+                "nodeId": "vdby1vt",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "vdby1vt-input-1",
+                "position": "left",
+                "nodeId": "vdby1vt",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 1620,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Format text",
+            "timeout": 20000,
+            "context": "website",
+            "code": "// Select all paragraphs in div.txt\nconst nodes = Array.from(document.querySelectorAll(\"div.txt p\"));\n\n// Filter out translator/editor lines, empties, and the specified novel promotion line\nconst filteredList = nodes\n  .map(p => p.innerText.trim())\n  .filter(t => \n    t && \n    !t.startsWith(\"Translator:\") && \n    !t.startsWith(\"Editor:\") && \n    t !== \"Visit and read more novel to help us update chapter quickly. Thank you so much!\"\n  );\n\n// FORMAT THE DATA: Join the array into a single string with double newlines\n// Use '\\n' for single spacing or '\\n\\n' for paragraph spacing\nconst formattedText = filteredList.join('\\n\\n');\n\n// Save the cleaned, formatted string to the variable\nautomaSetVariable('filteredText', formattedText);",
+            "preloadScripts": [],
+            "everyNewTab": false,
+            "runBeforeLoad": false
+          },
+          "events": {},
+          "label": "javascript-code"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-65a9jj465a9jj4-output-1-k2iewl4k2iewl4-input-1",
+        "type": "custom",
+        "source": "65a9jj4",
+        "target": "k2iewl4",
+        "sourceHandle": "65a9jj4-output-1",
+        "targetHandle": "k2iewl4-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 2128,
+        "sourceY": 133,
+        "targetX": 2188,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "65a9jj4",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 1912,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "65a9jj4-output-1",
+                "position": "right",
+                "nodeId": "65a9jj4",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "65a9jj4-input-1",
+                "position": "left",
+                "nodeId": "65a9jj4",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 1912,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Save text",
+            "dataList": [
+              {
+                "action": "default",
+                "filePath": "",
+                "isFile": false,
+                "name": "13sto",
+                "type": "table",
+                "value": "{{ variables@filteredText }}"
+              }
+            ]
+          },
+          "events": {},
+          "label": "insert-data"
+        },
+        "targetNode": {
+          "id": "k2iewl4",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 2204,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "k2iewl4-output-1",
+                "position": "right",
+                "nodeId": "k2iewl4",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "k2iewl4-input-1",
+                "position": "left",
+                "nodeId": "k2iewl4",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 2204,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Next chapter",
+            "findBy": "cssSelector",
+            "waitForSelector": false,
+            "waitSelectorTimeout": 5000,
+            "selector": "li > a[title=\"Read Next Chapter\"]",
+            "markEl": false,
+            "multiple": false
+          },
+          "events": {},
+          "label": "event-click"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-mvey9xkmvey9xk-output-1-21cag2k21cag2k-input-1",
+        "type": "custom",
+        "source": "mvey9xk",
+        "target": "21cag2k",
+        "sourceHandle": "mvey9xk-output-1",
+        "targetHandle": "21cag2k-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 604,
+        "sourceY": 133,
+        "targetX": 664,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "mvey9xk",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 388,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "mvey9xk-output-1",
+                "position": "right",
+                "nodeId": "mvey9xk",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "mvey9xk-input-1",
+                "position": "left",
+                "nodeId": "mvey9xk",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 388,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Use tab"
+          },
+          "events": {},
+          "label": "active-tab"
+        },
+        "targetNode": {
+          "id": "21cag2k",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 680,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "21cag2k-output-1",
+                "position": "right",
+                "nodeId": "21cag2k",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "21cag2k-input-1",
+                "position": "left",
+                "nodeId": "21cag2k",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 680,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "loopId": "KqwRI5",
+            "maxLoop": 0,
+            "toNumber": 200,
+            "fromNumber": 1,
+            "startIndex": 0,
+            "loopData": "[]",
+            "description": "Loop pages",
+            "variableName": "",
+            "referenceKey": "",
+            "reverseLoop": false,
+            "elementSelector": "",
+            "waitForSelector": false,
+            "waitSelectorTimeout": 5000,
+            "resumeLastWorkflow": false,
+            "loopThrough": "numbers"
+          },
+          "events": {},
+          "label": "loop-data"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-k2iewl4k2iewl4-output-1-4he22vc4he22vc-input-1",
+        "type": "custom",
+        "source": "k2iewl4",
+        "target": "4he22vc",
+        "sourceHandle": "k2iewl4-output-1",
+        "targetHandle": "4he22vc-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 2420,
+        "sourceY": 133,
+        "targetX": 2480,
+        "targetY": 172.5,
+        "sourceNode": {
+          "id": "k2iewl4",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 2204,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "k2iewl4-output-1",
+                "position": "right",
+                "nodeId": "k2iewl4",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "k2iewl4-input-1",
+                "position": "left",
+                "nodeId": "k2iewl4",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 2204,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Next chapter",
+            "findBy": "cssSelector",
+            "waitForSelector": false,
+            "waitSelectorTimeout": 5000,
+            "selector": "li > a[title=\"Read Next Chapter\"]",
+            "markEl": false,
+            "multiple": false
+          },
+          "events": {},
+          "label": "event-click"
+        },
+        "targetNode": {
+          "id": "4he22vc",
+          "type": "BlockLoopBreakpoint",
+          "dimensions": {
+            "width": 192,
+            "height": 151
+          },
+          "computedPosition": {
+            "x": 2496,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "4he22vc-output-1",
+                "position": "right",
+                "nodeId": "4he22vc",
+                "type": "source",
+                "x": 200,
+                "y": 67.5,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "4he22vc-input-1",
+                "position": "left",
+                "nodeId": "4he22vc",
+                "type": "target",
+                "x": -24,
+                "y": 67.5,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 2496,
+            "y": 97
+          },
+          "data": {
+            "clearLoop": false,
+            "disableBlock": false,
+            "loopId": "KqwRI5",
+            "description": "Repeat"
+          },
+          "events": {},
+          "label": "loop-breakpoint"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-h9s56clh9s56cl-output-qmT9qYfNyjNEEdRTVSLFJ-n3hjousn3hjous-input-1",
+        "type": "custom",
+        "source": "h9s56cl",
+        "target": "n3hjous",
+        "sourceHandle": "h9s56cl-output-qmT9qYfNyjNEEdRTVSLFJ",
+        "targetHandle": "n3hjous-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 1279.704071556294,
+        "sourceY": 107.24478711923214,
+        "targetX": 1312,
+        "targetY": 72,
+        "sourceNode": {
+          "id": "h9s56cl",
+          "type": "BlockConditions",
+          "dimensions": {
+            "width": 256,
+            "height": 157
+          },
+          "computedPosition": {
+            "x": 999.7040715562939,
+            "y": 49.74478711923214,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "h9s56cl-output-qmT9qYfNyjNEEdRTVSLFJ",
+                "position": "right",
+                "nodeId": "h9s56cl",
+                "type": "source",
+                "x": 264,
+                "y": 18,
+                "width": 16,
+                "height": 16
+              },
+              {
+                "id": "h9s56cl-output-fallback",
+                "position": "right",
+                "nodeId": "h9s56cl",
+                "type": "source",
+                "x": 264,
+                "y": 60,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "h9s56cl-input-1",
+                "position": "left",
+                "nodeId": "h9s56cl",
+                "type": "target",
+                "x": -24,
+                "y": 70.5,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 999.7040715562939,
+            "y": 49.74478711923214
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Check page",
+            "conditions": [
+              {
+                "id": "qmT9qYfNyjNEEdRTVSLFJ",
+                "name": "Path 1",
+                "conditions": [
+                  {
+                    "conditions": [
+                      {
+                        "id": "hsJqhAXHLMbSfB2bEFVp7",
+                        "items": [
+                          {
+                            "category": "value",
+                            "data": {
+                              "selector": "div.txt h4"
+                            },
+                            "id": "Pae631wSXUYQe2JUBDbUi",
+                            "type": "element#exists"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "B_uDKXrO0N4nSLdK9anmK"
+                  }
+                ]
+              }
+            ],
+            "retryConditions": false,
+            "retryCount": 10,
+            "retryTimeout": 1000
+          },
+          "events": {},
+          "label": "conditions"
+        },
+        "targetNode": {
+          "id": "n3hjous",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 1328,
+            "y": 36,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "n3hjous-output-1",
+                "position": "right",
+                "nodeId": "n3hjous",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "n3hjous-input-1",
+                "position": "left",
+                "nodeId": "n3hjous",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 1328,
+            "y": 36
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Get chapter",
+            "findBy": "cssSelector",
+            "waitForSelector": true,
+            "waitSelectorTimeout": 10000,
+            "selector": "div.txt h4",
+            "markEl": false,
+            "multiple": false,
+            "regex": "",
+            "prefixText": "",
+            "suffixText": "",
+            "regexExp": [],
+            "dataColumn": "Wz7Va",
+            "saveData": true,
+            "includeTags": false,
+            "addExtraRow": false,
+            "assignVariable": false,
+            "useTextContent": false,
+            "variableName": "",
+            "extraRowValue": "",
+            "extraRowDataColumn": ""
+          },
+          "events": {},
+          "label": "get-text"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-h9s56clh9s56cl-output-fallback-iywfud9iywfud9-input-1",
+        "type": "custom",
+        "source": "h9s56cl",
+        "target": "iywfud9",
+        "sourceHandle": "h9s56cl-output-fallback",
+        "targetHandle": "iywfud9-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 1279.704071556294,
+        "sourceY": 107.24478711923214,
+        "targetX": 1310.8062638390268,
+        "targetY": 195.19373616097312,
+        "sourceNode": {
+          "id": "h9s56cl",
+          "type": "BlockConditions",
+          "dimensions": {
+            "width": 256,
+            "height": 157
+          },
+          "computedPosition": {
+            "x": 999.7040715562939,
+            "y": 49.74478711923214,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "h9s56cl-output-qmT9qYfNyjNEEdRTVSLFJ",
+                "position": "right",
+                "nodeId": "h9s56cl",
+                "type": "source",
+                "x": 264,
+                "y": 18,
+                "width": 16,
+                "height": 16
+              },
+              {
+                "id": "h9s56cl-output-fallback",
+                "position": "right",
+                "nodeId": "h9s56cl",
+                "type": "source",
+                "x": 264,
+                "y": 60,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "h9s56cl-input-1",
+                "position": "left",
+                "nodeId": "h9s56cl",
+                "type": "target",
+                "x": -24,
+                "y": 70.5,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 999.7040715562939,
+            "y": 49.74478711923214
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Check page",
+            "conditions": [
+              {
+                "id": "qmT9qYfNyjNEEdRTVSLFJ",
+                "name": "Path 1",
+                "conditions": [
+                  {
+                    "conditions": [
+                      {
+                        "id": "hsJqhAXHLMbSfB2bEFVp7",
+                        "items": [
+                          {
+                            "category": "value",
+                            "data": {
+                              "selector": "div.txt h4"
+                            },
+                            "id": "Pae631wSXUYQe2JUBDbUi",
+                            "type": "element#exists"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "B_uDKXrO0N4nSLdK9anmK"
+                  }
+                ]
+              }
+            ],
+            "retryConditions": false,
+            "retryCount": 10,
+            "retryTimeout": 1000
+          },
+          "events": {},
+          "label": "conditions"
+        },
+        "targetNode": {
+          "id": "iywfud9",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 1326.8062638390268,
+            "y": 159.19373616097312,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "iywfud9-output-1",
+                "position": "right",
+                "nodeId": "iywfud9",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "iywfud9-input-1",
+                "position": "left",
+                "nodeId": "iywfud9",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 1326.8062638390268,
+            "y": 159.19373616097312
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Get title",
+            "findBy": "cssSelector",
+            "waitForSelector": true,
+            "waitSelectorTimeout": 10000,
+            "selector": "span.chapter",
+            "markEl": false,
+            "multiple": false,
+            "regex": "",
+            "prefixText": "",
+            "suffixText": "",
+            "regexExp": [],
+            "dataColumn": "Wz7Va",
+            "saveData": true,
+            "includeTags": false,
+            "addExtraRow": false,
+            "assignVariable": false,
+            "useTextContent": false,
+            "variableName": "",
+            "extraRowValue": "",
+            "extraRowDataColumn": ""
+          },
+          "events": {},
+          "label": "get-text"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-iywfud9iywfud9-output-1-vdby1vtvdby1vt-input-1",
+        "type": "custom",
+        "source": "iywfud9",
+        "target": "vdby1vt",
+        "sourceHandle": "iywfud9-output-1",
+        "targetHandle": "vdby1vt-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 1542.8062638390268,
+        "sourceY": 195.19373616097312,
+        "targetX": 1604,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "iywfud9",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 1326.8062638390268,
+            "y": 159.19373616097312,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "iywfud9-output-1",
+                "position": "right",
+                "nodeId": "iywfud9",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "iywfud9-input-1",
+                "position": "left",
+                "nodeId": "iywfud9",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 1326.8062638390268,
+            "y": 159.19373616097312
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Get title",
+            "findBy": "cssSelector",
+            "waitForSelector": true,
+            "waitSelectorTimeout": 10000,
+            "selector": "span.chapter",
+            "markEl": false,
+            "multiple": false,
+            "regex": "",
+            "prefixText": "",
+            "suffixText": "",
+            "regexExp": [],
+            "dataColumn": "Wz7Va",
+            "saveData": true,
+            "includeTags": false,
+            "addExtraRow": false,
+            "assignVariable": false,
+            "useTextContent": false,
+            "variableName": "",
+            "extraRowValue": "",
+            "extraRowDataColumn": ""
+          },
+          "events": {},
+          "label": "get-text"
+        },
+        "targetNode": {
+          "id": "vdby1vt",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 1620,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "vdby1vt-output-1",
+                "position": "right",
+                "nodeId": "vdby1vt",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "vdby1vt-input-1",
+                "position": "left",
+                "nodeId": "vdby1vt",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 1620,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Format text",
+            "timeout": 20000,
+            "context": "website",
+            "code": "// Select all paragraphs in div.txt\nconst nodes = Array.from(document.querySelectorAll(\"div.txt p\"));\n\n// Filter out translator/editor lines, empties, and the specified novel promotion line\nconst filteredList = nodes\n  .map(p => p.innerText.trim())\n  .filter(t => \n    t && \n    !t.startsWith(\"Translator:\") && \n    !t.startsWith(\"Editor:\") && \n    t !== \"Visit and read more novel to help us update chapter quickly. Thank you so much!\"\n  );\n\n// FORMAT THE DATA: Join the array into a single string with double newlines\n// Use '\\n' for single spacing or '\\n\\n' for paragraph spacing\nconst formattedText = filteredList.join('\\n\\n');\n\n// Save the cleaned, formatted string to the variable\nautomaSetVariable('filteredText', formattedText);",
+            "preloadScripts": [],
+            "everyNewTab": false,
+            "runBeforeLoad": false
+          },
+          "events": {},
+          "label": "javascript-code"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-21cag2k21cag2k-output-1-h9s56clh9s56cl-input-1",
+        "type": "custom",
+        "source": "21cag2k",
+        "target": "h9s56cl",
+        "sourceHandle": "21cag2k-output-1",
+        "targetHandle": "h9s56cl-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 896,
+        "sourceY": 133,
+        "targetX": 983.7040715562939,
+        "targetY": 128.24478711923214,
+        "sourceNode": {
+          "id": "21cag2k",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 680,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "21cag2k-output-1",
+                "position": "right",
+                "nodeId": "21cag2k",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "21cag2k-input-1",
+                "position": "left",
+                "nodeId": "21cag2k",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 680,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "loopId": "KqwRI5",
+            "maxLoop": 0,
+            "toNumber": 200,
+            "fromNumber": 1,
+            "startIndex": 0,
+            "loopData": "[]",
+            "description": "Loop pages",
+            "variableName": "",
+            "referenceKey": "",
+            "reverseLoop": false,
+            "elementSelector": "",
+            "waitForSelector": false,
+            "waitSelectorTimeout": 5000,
+            "resumeLastWorkflow": false,
+            "loopThrough": "numbers"
+          },
+          "events": {},
+          "label": "loop-data"
+        },
+        "targetNode": {
+          "id": "h9s56cl",
+          "type": "BlockConditions",
+          "dimensions": {
+            "width": 256,
+            "height": 157
+          },
+          "computedPosition": {
+            "x": 999.7040715562939,
+            "y": 49.74478711923214,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "h9s56cl-output-qmT9qYfNyjNEEdRTVSLFJ",
+                "position": "right",
+                "nodeId": "h9s56cl",
+                "type": "source",
+                "x": 264,
+                "y": 18,
+                "width": 16,
+                "height": 16
+              },
+              {
+                "id": "h9s56cl-output-fallback",
+                "position": "right",
+                "nodeId": "h9s56cl",
+                "type": "source",
+                "x": 264,
+                "y": 60,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "h9s56cl-input-1",
+                "position": "left",
+                "nodeId": "h9s56cl",
+                "type": "target",
+                "x": -24,
+                "y": 70.5,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 999.7040715562939,
+            "y": 49.74478711923214
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Check page",
+            "conditions": [
+              {
+                "id": "qmT9qYfNyjNEEdRTVSLFJ",
+                "name": "Path 1",
+                "conditions": [
+                  {
+                    "conditions": [
+                      {
+                        "id": "hsJqhAXHLMbSfB2bEFVp7",
+                        "items": [
+                          {
+                            "category": "value",
+                            "data": {
+                              "selector": "div.txt h4"
+                            },
+                            "id": "Pae631wSXUYQe2JUBDbUi",
+                            "type": "element#exists"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "B_uDKXrO0N4nSLdK9anmK"
+                  }
+                ]
+              }
+            ],
+            "retryConditions": false,
+            "retryCount": 10,
+            "retryTimeout": 1000
+          },
+          "events": {},
+          "label": "conditions"
+        },
+        "selected": true
+      }
+    ]
+  }
+}

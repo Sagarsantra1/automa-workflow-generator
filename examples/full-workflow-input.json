@@ -1,0 +1,496 @@
+{
+  "blocks": [
+    {
+      "id": "start",
+      "type": "trigger",
+      "description": "Start"
+    },
+    {
+      "id": "tab",
+      "type": "new-tab",
+      "description": "Open page",
+      "data": {
+        "url": "https://example.com",
+        "active": true,
+        "waitTabLoaded": true
+      }
+    },
+    {
+      "id": "click",
+      "type": "event-click",
+      "description": "Click",
+      "data": {
+        "findBy": "cssSelector",
+        "selector": "button.login",
+        "waitForSelector": true,
+        "waitSelectorTimeout": 5000
+      }
+    },
+    {
+      "id": "text",
+      "type": "get-text",
+      "description": "Get title",
+      "data": {
+        "findBy": "cssSelector",
+        "selector": "h1",
+        "assignVariable": true,
+        "variableName": "title",
+        "saveData": true,
+        "dataColumn": "Title"
+      }
+    },
+    {
+      "id": "form",
+      "type": "forms",
+      "description": "Fill name",
+      "data": {
+        "findBy": "cssSelector",
+        "selector": "#name",
+        "type": "text-field",
+        "value": "{{name}}",
+        "clearValue": true,
+        "delay": 0
+      }
+    },
+    {
+      "id": "exists",
+      "type": "element-exists",
+      "description": "Has result",
+      "data": {
+        "findBy": "cssSelector",
+        "selector": ".result",
+        "tryCount": 2,
+        "timeout": 500,
+        "throwError": false
+      }
+    },
+    {
+      "id": "cond",
+      "type": "conditions",
+      "description": "Check result",
+      "paths": [
+        {
+          "id": "found",
+          "name": "Found",
+          "conditions": []
+        },
+        {
+          "id": "missing",
+          "name": "Missing",
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": "js",
+      "type": "javascript-code",
+      "description": "Process data",
+      "data": {
+        "context": "website",
+        "code": "automaSetVariable(\"ready\", true);\nautomaNextBlock();"
+      }
+    },
+    {
+      "id": "loop",
+      "type": "loop-data",
+      "description": "Loop rows",
+      "loopId": "rows",
+      "data": {
+        "loopThrough": "data-columns",
+        "maxLoop": 0
+      }
+    },
+    {
+      "id": "loopEl",
+      "type": "loop-elements",
+      "description": "Loop items",
+      "loopId": "items",
+      "data": {
+        "findBy": "cssSelector",
+        "selector": ".item",
+        "loadMoreAction": "none"
+      }
+    },
+    {
+      "id": "wait",
+      "type": "delay",
+      "description": "Wait",
+      "data": {
+        "time": 1000
+      }
+    },
+    {
+      "id": "map",
+      "type": "data-mapping",
+      "description": "Map data",
+      "data": {
+        "dataSource": "table",
+        "sources": [
+          {
+            "id": "s1",
+            "name": "Title",
+            "destinations": [
+              {
+                "id": "d1",
+                "name": "title"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "insert",
+      "type": "insert-data",
+      "description": "Save row",
+      "data": {
+        "dataList": [
+          {
+            "name": "Result",
+            "type": "table",
+            "value": "{{title}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "scroll",
+      "type": "element-scroll",
+      "description": "Scroll page",
+      "data": {
+        "findBy": "cssSelector",
+        "selector": "html",
+        "scrollY": 500
+      }
+    },
+    {
+      "id": "attr",
+      "type": "attribute-value",
+      "description": "Get href",
+      "data": {
+        "findBy": "cssSelector",
+        "selector": "a.next",
+        "action": "get",
+        "attributeName": "href",
+        "assignVariable": true,
+        "variableName": "nextUrl"
+      }
+    },
+    {
+      "id": "press",
+      "type": "press-key",
+      "description": "Press Enter",
+      "data": {
+        "action": "press-key",
+        "keys": "Enter"
+      }
+    },
+    {
+      "id": "shot",
+      "type": "take-screenshot",
+      "description": "Capture",
+      "data": {
+        "type": "element",
+        "selector": ".result",
+        "saveToComputer": true,
+        "fileName": "result",
+        "ext": "png"
+      }
+    },
+    {
+      "id": "copy",
+      "type": "clipboard",
+      "description": "Copy text",
+      "data": {
+        "type": "insert",
+        "dataToCopy": "{{title}}",
+        "copySelectedText": false
+      }
+    },
+    {
+      "id": "inc",
+      "type": "increase-variable",
+      "description": "Count",
+      "data": {
+        "variableName": "page",
+        "increaseBy": 1
+      }
+    },
+    {
+      "id": "webhook",
+      "type": "http-request",
+      "description": "Send result",
+      "data": {
+        "method": "POST",
+        "url": "https://example.com/hook",
+        "contentType": "json",
+        "body": "{\"title\":\"{{title}}\"}",
+        "responseType": "json"
+      }
+    },
+    {
+      "id": "notify",
+      "type": "notification",
+      "description": "Done",
+      "data": {
+        "title": "Done",
+        "message": "Workflow complete"
+      }
+    },
+    {
+      "id": "execute",
+      "type": "execute-workflow",
+      "description": "Run child",
+      "data": {
+        "workflowId": "child-workflow",
+        "executeId": "run1"
+      }
+    },
+    {
+      "id": "while",
+      "type": "while-loop",
+      "description": "Repeat",
+      "paths": [
+        {
+          "id": "again",
+          "name": "Again",
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": "switch",
+      "type": "switch-tab",
+      "description": "Find tab",
+      "data": {
+        "findTabBy": "tab-title",
+        "tabTitle": "Example"
+      }
+    },
+    {
+      "id": "window",
+      "type": "new-window",
+      "description": "New window",
+      "data": {
+        "type": "popup",
+        "windowState": "normal",
+        "width": 800,
+        "height": 600
+      }
+    },
+    {
+      "id": "upload",
+      "type": "upload-file",
+      "description": "Upload file",
+      "data": {
+        "findBy": "cssSelector",
+        "selector": "input[type=file]",
+        "filePaths": [
+          "C:/tmp/test.pdf"
+        ]
+      }
+    },
+    {
+      "id": "download",
+      "type": "handle-download",
+      "description": "Handle file",
+      "data": {
+        "downloadId": "",
+        "waitForDownload": true,
+        "filename": "result",
+        "onConflict": "uniquify"
+      }
+    },
+    {
+      "id": "break",
+      "type": "loop-breakpoint",
+      "description": "Loop back",
+      "data": {
+        "loopId": "rows",
+        "clearLoop": false
+      }
+    },
+    {
+      "id": "close",
+      "type": "close-tab",
+      "description": "Close tab",
+      "data": {
+        "closeType": "tab",
+        "activeTab": true
+      }
+    },
+    {
+      "id": "back",
+      "type": "go-back",
+      "description": "Go back"
+    },
+    {
+      "id": "forward",
+      "type": "forward-page",
+      "description": "Go forward"
+    },
+    {
+      "id": "browserEvent",
+      "type": "browser-event",
+      "description": "Wait load",
+      "data": {
+        "eventName": "tab:loaded",
+        "timeout": 10000
+      }
+    },
+    {
+      "id": "export",
+      "type": "export-data",
+      "description": "Export JSON",
+      "data": {
+        "name": "result",
+        "type": "json",
+        "dataToExport": "data-columns"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "start",
+      "to": "tab"
+    },
+    {
+      "from": "tab",
+      "to": "click"
+    },
+    {
+      "from": "click",
+      "to": "text"
+    },
+    {
+      "from": "text",
+      "to": "form"
+    },
+    {
+      "from": "form",
+      "to": "exists"
+    },
+    {
+      "from": "exists",
+      "to": "cond",
+      "branch": "true"
+    },
+    {
+      "from": "exists",
+      "to": "back",
+      "branch": "false"
+    },
+    {
+      "from": "cond",
+      "to": "js",
+      "branch": "found"
+    },
+    {
+      "from": "cond",
+      "to": "notify",
+      "branch": "missing"
+    },
+    {
+      "from": "js",
+      "to": "loop"
+    },
+    {
+      "from": "loop",
+      "to": "loopEl"
+    },
+    {
+      "from": "loopEl",
+      "to": "wait"
+    },
+    {
+      "from": "wait",
+      "to": "map"
+    },
+    {
+      "from": "map",
+      "to": "insert"
+    },
+    {
+      "from": "insert",
+      "to": "scroll"
+    },
+    {
+      "from": "scroll",
+      "to": "attr"
+    },
+    {
+      "from": "attr",
+      "to": "press"
+    },
+    {
+      "from": "press",
+      "to": "shot"
+    },
+    {
+      "from": "shot",
+      "to": "copy"
+    },
+    {
+      "from": "copy",
+      "to": "inc"
+    },
+    {
+      "from": "inc",
+      "to": "webhook"
+    },
+    {
+      "from": "webhook",
+      "to": "notify"
+    },
+    {
+      "from": "notify",
+      "to": "execute"
+    },
+    {
+      "from": "execute",
+      "to": "while"
+    },
+    {
+      "from": "while",
+      "to": "switch",
+      "branch": "1"
+    },
+    {
+      "from": "while",
+      "to": "export",
+      "branch": "fallback"
+    },
+    {
+      "from": "switch",
+      "to": "window"
+    },
+    {
+      "from": "window",
+      "to": "upload"
+    },
+    {
+      "from": "upload",
+      "to": "download"
+    },
+    {
+      "from": "download",
+      "to": "break"
+    },
+    {
+      "from": "break",
+      "to": "loop"
+    },
+    {
+      "from": "back",
+      "to": "forward"
+    },
+    {
+      "from": "forward",
+      "to": "browserEvent"
+    },
+    {
+      "from": "browserEvent",
+      "to": "export"
+    }
+  ]
+}

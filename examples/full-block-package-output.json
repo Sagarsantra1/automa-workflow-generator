@@ -1,0 +1,7225 @@
+{
+  "name": "automa-blocks",
+  "data": {
+    "nodes": [
+      {
+        "id": "start",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 96,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "start-output-1",
+              "position": "right",
+              "nodeId": "start",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": []
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 96,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Start",
+          "type": "manual",
+          "interval": 60,
+          "delay": 5,
+          "date": "",
+          "time": "00:00",
+          "url": "",
+          "shortcut": "",
+          "activeInInput": false,
+          "isUrlRegex": false,
+          "days": [],
+          "contextMenuName": "",
+          "contextTypes": [],
+          "parameters": [],
+          "preferParamsInTab": false,
+          "observeElement": {
+            "selector": "",
+            "baseSelector": "",
+            "matchPattern": "",
+            "targetOptions": {
+              "subtree": false,
+              "childList": true,
+              "attributes": false,
+              "attributeFilter": [],
+              "characterData": false
+            },
+            "baseElOptions": {
+              "subtree": false,
+              "childList": true,
+              "attributes": false,
+              "attributeFilter": [],
+              "characterData": false
+            }
+          }
+        },
+        "events": {},
+        "label": "trigger"
+      },
+      {
+        "id": "tab",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 388,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "tab-output-1",
+              "position": "right",
+              "nodeId": "tab",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "tab-input-1",
+              "position": "left",
+              "nodeId": "tab",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 388,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Open page",
+          "url": "https://example.com",
+          "userAgent": "",
+          "active": true,
+          "tabZoom": 1,
+          "inGroup": false,
+          "waitTabLoaded": true,
+          "updatePrevTab": false,
+          "customUserAgent": false
+        },
+        "events": {},
+        "label": "new-tab"
+      },
+      {
+        "id": "click",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 680,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "click-output-1",
+              "position": "right",
+              "nodeId": "click",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "click-input-1",
+              "position": "left",
+              "nodeId": "click",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 680,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Click",
+          "findBy": "cssSelector",
+          "waitForSelector": true,
+          "waitSelectorTimeout": 5000,
+          "selector": "button.login",
+          "markEl": false,
+          "multiple": false
+        },
+        "events": {},
+        "label": "event-click"
+      },
+      {
+        "id": "text",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 972,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "text-output-1",
+              "position": "right",
+              "nodeId": "text",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "text-input-1",
+              "position": "left",
+              "nodeId": "text",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 972,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Get title",
+          "findBy": "cssSelector",
+          "waitForSelector": false,
+          "waitSelectorTimeout": 5000,
+          "selector": "h1",
+          "markEl": false,
+          "multiple": false,
+          "regex": "",
+          "prefixText": "",
+          "suffixText": "",
+          "regexExp": [],
+          "dataColumn": "Title",
+          "saveData": true,
+          "includeTags": false,
+          "addExtraRow": false,
+          "assignVariable": true,
+          "useTextContent": false,
+          "variableName": "title",
+          "extraRowValue": "",
+          "extraRowDataColumn": ""
+        },
+        "events": {},
+        "label": "get-text"
+      },
+      {
+        "id": "form",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 1264,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "form-output-1",
+              "position": "right",
+              "nodeId": "form",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "form-input-1",
+              "position": "left",
+              "nodeId": "form",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 1264,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Fill name",
+          "findBy": "cssSelector",
+          "waitForSelector": false,
+          "waitSelectorTimeout": 5000,
+          "selector": "#name",
+          "markEl": false,
+          "multiple": false,
+          "selected": true,
+          "clearValue": true,
+          "getValue": false,
+          "saveData": false,
+          "dataColumn": "",
+          "selectOptionBy": "value",
+          "optionPosition": "1",
+          "value": "{{name}}",
+          "delay": 0,
+          "events": [],
+          "assignVariable": false,
+          "variableName": "",
+          "type": "text-field"
+        },
+        "events": {},
+        "label": "forms"
+      },
+      {
+        "id": "exists",
+        "type": "BlockElementExists",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 1556,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "exists-output-1",
+              "position": "right",
+              "nodeId": "exists",
+              "type": "source",
+              "x": 200,
+              "y": 18,
+              "width": 16,
+              "height": 16
+            },
+            {
+              "id": "exists-output-2",
+              "position": "right",
+              "nodeId": "exists",
+              "type": "source",
+              "x": 200,
+              "y": 50,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "exists-input-1",
+              "position": "left",
+              "nodeId": "exists",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 1556,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Has result",
+          "findBy": "cssSelector",
+          "selector": ".result",
+          "tryCount": 2,
+          "timeout": 500,
+          "markEl": false,
+          "throwError": false
+        },
+        "events": {},
+        "label": "element-exists"
+      },
+      {
+        "id": "cond",
+        "type": "BlockConditions",
+        "dimensions": {
+          "width": 256,
+          "height": 157
+        },
+        "computedPosition": {
+          "x": 1848,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "cond-output-found",
+              "position": "right",
+              "nodeId": "cond",
+              "type": "source",
+              "x": 264,
+              "y": 18,
+              "width": 16,
+              "height": 16
+            },
+            {
+              "id": "cond-output-missing",
+              "position": "right",
+              "nodeId": "cond",
+              "type": "source",
+              "x": 264,
+              "y": 60,
+              "width": 16,
+              "height": 16
+            },
+            {
+              "id": "cond-output-fallback",
+              "position": "right",
+              "nodeId": "cond",
+              "type": "source",
+              "x": 264,
+              "y": 102,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "cond-input-1",
+              "position": "left",
+              "nodeId": "cond",
+              "type": "target",
+              "x": -24,
+              "y": 70.5,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 1848,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Check result",
+          "conditions": [
+            {
+              "id": "found",
+              "name": "Found",
+              "conditions": []
+            },
+            {
+              "id": "missing",
+              "name": "Missing",
+              "conditions": []
+            }
+          ],
+          "retryConditions": false,
+          "retryCount": 10,
+          "retryTimeout": 1000
+        },
+        "events": {},
+        "label": "conditions"
+      },
+      {
+        "id": "js",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 2140,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "js-output-1",
+              "position": "right",
+              "nodeId": "js",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "js-input-1",
+              "position": "left",
+              "nodeId": "js",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 2140,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Process data",
+          "timeout": 20000,
+          "context": "website",
+          "code": "automaSetVariable(\"ready\", true);\nautomaNextBlock();",
+          "preloadScripts": [],
+          "everyNewTab": false,
+          "runBeforeLoad": false
+        },
+        "events": {},
+        "label": "javascript-code"
+      },
+      {
+        "id": "loop",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 2432,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "loop-output-1",
+              "position": "right",
+              "nodeId": "loop",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "loop-input-1",
+              "position": "left",
+              "nodeId": "loop",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 2432,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "loopId": "rows",
+          "maxLoop": 0,
+          "toNumber": 10,
+          "fromNumber": 1,
+          "startIndex": 0,
+          "loopData": "[]",
+          "description": "Loop rows",
+          "variableName": "",
+          "referenceKey": "",
+          "reverseLoop": false,
+          "elementSelector": "",
+          "waitForSelector": false,
+          "waitSelectorTimeout": 5000,
+          "resumeLastWorkflow": false,
+          "loopThrough": "data-columns"
+        },
+        "events": {},
+        "label": "loop-data"
+      },
+      {
+        "id": "loopEl",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 2724,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "loopEl-output-1",
+              "position": "right",
+              "nodeId": "loopEl",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "loopEl-input-1",
+              "position": "left",
+              "nodeId": "loopEl",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 2724,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "loopId": "items",
+          "selector": ".item",
+          "maxLoop": "0",
+          "description": "Loop items",
+          "reverseLoop": false,
+          "actionElSelector": "",
+          "findBy": "cssSelector",
+          "actionElMaxWaitTime": 5,
+          "actionPageMaxWaitTime": 10,
+          "loadMoreAction": "none",
+          "scrollToBottom": true,
+          "waitForSelector": false,
+          "waitSelectorTimeout": 5000
+        },
+        "events": {},
+        "label": "loop-elements"
+      },
+      {
+        "id": "wait",
+        "type": "BlockDelay",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 3016,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "wait-output-1",
+              "position": "right",
+              "nodeId": "wait",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "wait-input-1",
+              "position": "left",
+              "nodeId": "wait",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 3016,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "time": 1000,
+          "description": "Wait"
+        },
+        "events": {},
+        "label": "delay"
+      },
+      {
+        "id": "map",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 3308,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "map-output-1",
+              "position": "right",
+              "nodeId": "map",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "map-input-1",
+              "position": "left",
+              "nodeId": "map",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 3308,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Map data",
+          "dataSource": "table",
+          "sources": [
+            {
+              "id": "s1",
+              "name": "Title",
+              "destinations": [
+                {
+                  "id": "d1",
+                  "name": "title"
+                }
+              ]
+            }
+          ],
+          "varSourceName": "",
+          "dataColumn": "",
+          "saveData": false,
+          "assignVariable": false,
+          "variableName": ""
+        },
+        "events": {},
+        "label": "data-mapping"
+      },
+      {
+        "id": "insert",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 3600,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "insert-output-1",
+              "position": "right",
+              "nodeId": "insert",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "insert-input-1",
+              "position": "left",
+              "nodeId": "insert",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 3600,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Save row",
+          "dataList": [
+            {
+              "name": "Result",
+              "type": "table",
+              "value": "{{title}}"
+            }
+          ]
+        },
+        "events": {},
+        "label": "insert-data"
+      },
+      {
+        "id": "scroll",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 3892,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "scroll-output-1",
+              "position": "right",
+              "nodeId": "scroll",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "scroll-input-1",
+              "position": "left",
+              "nodeId": "scroll",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 3892,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Scroll page",
+          "findBy": "cssSelector",
+          "waitForSelector": false,
+          "waitSelectorTimeout": 5000,
+          "selector": "html",
+          "markEl": false,
+          "multiple": false,
+          "scrollY": 500,
+          "scrollX": 0,
+          "incX": false,
+          "incY": false,
+          "smooth": false,
+          "scrollIntoView": false
+        },
+        "events": {},
+        "label": "element-scroll"
+      },
+      {
+        "id": "attr",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 4184,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "attr-output-1",
+              "position": "right",
+              "nodeId": "attr",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "attr-input-1",
+              "position": "left",
+              "nodeId": "attr",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 4184,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Get href",
+          "findBy": "cssSelector",
+          "waitForSelector": false,
+          "waitSelectorTimeout": 5000,
+          "selector": "a.next",
+          "markEl": false,
+          "multiple": false,
+          "attributeValue": "",
+          "attributeName": "href",
+          "assignVariable": true,
+          "variableName": "nextUrl",
+          "dataColumn": "",
+          "saveData": true,
+          "action": "get",
+          "addExtraRow": false,
+          "extraRowValue": "",
+          "extraRowDataColumn": ""
+        },
+        "events": {},
+        "label": "attribute-value"
+      },
+      {
+        "id": "press",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 4476,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "press-output-1",
+              "position": "right",
+              "nodeId": "press",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "press-input-1",
+              "position": "left",
+              "nodeId": "press",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 4476,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "keys": "Enter",
+          "selector": "",
+          "pressTime": "0",
+          "description": "Press Enter",
+          "keysToPress": "",
+          "action": "press-key"
+        },
+        "events": {},
+        "label": "press-key"
+      },
+      {
+        "id": "shot",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 4768,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "shot-output-1",
+              "position": "right",
+              "nodeId": "shot",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "shot-input-1",
+              "position": "left",
+              "nodeId": "shot",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 4768,
+          "y": 97
+        },
+        "data": {
+          "description": "Capture",
+          "disableBlock": false,
+          "fileName": "result",
+          "ext": "png",
+          "quality": 100,
+          "dataColumn": "",
+          "variableName": "",
+          "selector": ".result",
+          "fullPage": false,
+          "saveToColumn": false,
+          "saveToComputer": true,
+          "assignVariable": false,
+          "captureActiveTab": true,
+          "type": "element"
+        },
+        "events": {},
+        "label": "take-screenshot"
+      },
+      {
+        "id": "copy",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 5060,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "copy-output-1",
+              "position": "right",
+              "nodeId": "copy",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "copy-input-1",
+              "position": "left",
+              "nodeId": "copy",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 5060,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Copy text",
+          "type": "insert",
+          "assignVariable": false,
+          "variableName": "",
+          "saveData": true,
+          "dataColumn": "",
+          "dataToCopy": "{{title}}",
+          "copySelectedText": false
+        },
+        "events": {},
+        "label": "clipboard"
+      },
+      {
+        "id": "inc",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 5352,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "inc-output-1",
+              "position": "right",
+              "nodeId": "inc",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "inc-input-1",
+              "position": "left",
+              "nodeId": "inc",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 5352,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Count",
+          "variableName": "page",
+          "increaseBy": 1
+        },
+        "events": {},
+        "label": "increase-variable"
+      },
+      {
+        "id": "webhook",
+        "type": "BlockBasicWithFallback",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 5644,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "webhook-output-1",
+              "position": "right",
+              "nodeId": "webhook",
+              "type": "source",
+              "x": 200,
+              "y": 18,
+              "width": 16,
+              "height": 16
+            },
+            {
+              "id": "webhook-output-fallback",
+              "position": "right",
+              "nodeId": "webhook",
+              "type": "source",
+              "x": 200,
+              "y": 50,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "webhook-input-1",
+              "position": "left",
+              "nodeId": "webhook",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 5644,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Send result",
+          "url": "https://example.com/hook",
+          "body": "{\"title\":\"{{title}}\"}",
+          "headers": [],
+          "method": "POST",
+          "timeout": 10000,
+          "dataPath": "",
+          "contentType": "json",
+          "variableName": "",
+          "assignVariable": false,
+          "saveData": false,
+          "dataColumn": "",
+          "responseType": "json"
+        },
+        "events": {},
+        "label": "webhook"
+      },
+      {
+        "id": "notify",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 5936,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "notify-output-1",
+              "position": "right",
+              "nodeId": "notify",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "notify-input-1",
+              "position": "left",
+              "nodeId": "notify",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 5936,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Done",
+          "message": "Workflow complete",
+          "iconUrl": "",
+          "imageUrl": "",
+          "title": "Done"
+        },
+        "events": {},
+        "label": "notification"
+      },
+      {
+        "id": "execute",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 6228,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "execute-output-1",
+              "position": "right",
+              "nodeId": "execute",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "execute-input-1",
+              "position": "left",
+              "nodeId": "execute",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 6228,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "executeId": "run1",
+          "workflowId": "child-workflow",
+          "globalData": "",
+          "description": "Run child",
+          "insertAllVars": false,
+          "insertAllGlobalData": false,
+          "insertVars": ""
+        },
+        "events": {},
+        "label": "execute-workflow"
+      },
+      {
+        "id": "while",
+        "type": "BlockBasicWithFallback",
+        "dimensions": {
+          "width": 256,
+          "height": 157
+        },
+        "computedPosition": {
+          "x": 6520,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "while-output-1",
+              "position": "right",
+              "nodeId": "while",
+              "type": "source",
+              "x": 264,
+              "y": 18,
+              "width": 16,
+              "height": 16
+            },
+            {
+              "id": "while-output-fallback",
+              "position": "right",
+              "nodeId": "while",
+              "type": "source",
+              "x": 264,
+              "y": 60,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "while-input-1",
+              "position": "left",
+              "nodeId": "while",
+              "type": "target",
+              "x": -24,
+              "y": 70.5,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 6520,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Repeat",
+          "conditions": [
+            {
+              "id": "again",
+              "name": "Again",
+              "conditions": []
+            }
+          ],
+          "retryConditions": false,
+          "retryCount": 10,
+          "retryTimeout": 1000
+        },
+        "events": {},
+        "label": "while-loop"
+      },
+      {
+        "id": "switch",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 6812,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "switch-output-1",
+              "position": "right",
+              "nodeId": "switch",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "switch-input-1",
+              "position": "left",
+              "nodeId": "switch",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 6812,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Find tab",
+          "url": "",
+          "tabIndex": 0,
+          "tabTitle": "Example",
+          "matchPattern": "",
+          "activeTab": true,
+          "createIfNoMatch": false,
+          "findTabBy": "tab-title"
+        },
+        "events": {},
+        "label": "switch-tab"
+      },
+      {
+        "id": "window",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 7104,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "window-output-1",
+              "position": "right",
+              "nodeId": "window",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "window-input-1",
+              "position": "left",
+              "nodeId": "window",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 7104,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "New window",
+          "top": 0,
+          "left": 0,
+          "width": 800,
+          "url": "",
+          "height": 600,
+          "type": "popup",
+          "incognito": false,
+          "windowState": "normal"
+        },
+        "events": {},
+        "label": "new-window"
+      },
+      {
+        "id": "upload",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 7396,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "upload-output-1",
+              "position": "right",
+              "nodeId": "upload",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "upload-input-1",
+              "position": "left",
+              "nodeId": "upload",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 7396,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "findBy": "cssSelector",
+          "waitForSelector": false,
+          "waitSelectorTimeout": 5000,
+          "selector": "input[type=file]",
+          "filePaths": [
+            "C:/tmp/test.pdf"
+          ],
+          "description": "Upload file"
+        },
+        "events": {},
+        "label": "upload-file"
+      },
+      {
+        "id": "download",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 7688,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "download-output-1",
+              "position": "right",
+              "nodeId": "download",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "download-input-1",
+              "position": "left",
+              "nodeId": "download",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 7688,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Handle file",
+          "filename": "result",
+          "timeout": 20000,
+          "onConflict": "uniquify",
+          "waitForDownload": true,
+          "dataColumn": "",
+          "saveData": true,
+          "assignVariable": false,
+          "variableName": "",
+          "downloadId": ""
+        },
+        "events": {},
+        "label": "handle-download"
+      },
+      {
+        "id": "break",
+        "type": "BlockLoopBreakpoint",
+        "dimensions": {
+          "width": 192,
+          "height": 151
+        },
+        "computedPosition": {
+          "x": 7980,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "break-output-1",
+              "position": "right",
+              "nodeId": "break",
+              "type": "source",
+              "x": 200,
+              "y": 67.5,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "break-input-1",
+              "position": "left",
+              "nodeId": "break",
+              "type": "target",
+              "x": -24,
+              "y": 67.5,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 7980,
+          "y": 97
+        },
+        "data": {
+          "clearLoop": false,
+          "disableBlock": false,
+          "loopId": "rows",
+          "description": "Loop back"
+        },
+        "events": {},
+        "label": "loop-breakpoint"
+      },
+      {
+        "id": "close",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 8272,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "close-output-1",
+              "position": "right",
+              "nodeId": "close",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "close-input-1",
+              "position": "left",
+              "nodeId": "close",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 8272,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "url": "",
+          "description": "Close tab",
+          "activeTab": true,
+          "closeType": "tab",
+          "allWindows": false
+        },
+        "events": {},
+        "label": "close-tab"
+      },
+      {
+        "id": "back",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 8564,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "back-output-1",
+              "position": "right",
+              "nodeId": "back",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "back-input-1",
+              "position": "left",
+              "nodeId": "back",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 8564,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Go back"
+        },
+        "events": {},
+        "label": "go-back"
+      },
+      {
+        "id": "forward",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 8856,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "forward-output-1",
+              "position": "right",
+              "nodeId": "forward",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "forward-input-1",
+              "position": "left",
+              "nodeId": "forward",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 8856,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Go forward"
+        },
+        "events": {},
+        "label": "forward-page"
+      },
+      {
+        "id": "browserEvent",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 9148,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "browserEvent-output-1",
+              "position": "right",
+              "nodeId": "browserEvent",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "browserEvent-input-1",
+              "position": "left",
+              "nodeId": "browserEvent",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 9148,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "description": "Wait load",
+          "timeout": 10000,
+          "eventName": "tab:loaded",
+          "setAsActiveTab": true,
+          "activeTabLoaded": true,
+          "tabLoadedUrl": "",
+          "tabUrl": "",
+          "fileQuery": ""
+        },
+        "events": {},
+        "label": "browser-event"
+      },
+      {
+        "id": "export",
+        "type": "BlockBasic",
+        "dimensions": {
+          "width": 192,
+          "height": 72
+        },
+        "computedPosition": {
+          "x": 9440,
+          "y": 97,
+          "z": 1000
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "export-output-1",
+              "position": "right",
+              "nodeId": "export",
+              "type": "source",
+              "x": 200,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ],
+          "target": [
+            {
+              "id": "export-input-1",
+              "position": "left",
+              "nodeId": "export",
+              "type": "target",
+              "x": -24,
+              "y": 28,
+              "width": 16,
+              "height": 16
+            }
+          ]
+        },
+        "selected": true,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 9440,
+          "y": 97
+        },
+        "data": {
+          "disableBlock": false,
+          "name": "result",
+          "refKey": "",
+          "type": "json",
+          "description": "Export JSON",
+          "variableName": "",
+          "csvDelimiter": ",",
+          "addBOMHeader": true,
+          "onConflict": "uniquify",
+          "dataToExport": "data-columns"
+        },
+        "events": {},
+        "label": "export-data"
+      }
+    ],
+    "edges": [
+      {
+        "id": "vueflow__edge-startstart-output-1-tabtab-input-1",
+        "type": "custom",
+        "source": "start",
+        "target": "tab",
+        "sourceHandle": "start-output-1",
+        "targetHandle": "tab-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 312,
+        "sourceY": 133,
+        "targetX": 372,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "start",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 96,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "start-output-1",
+                "position": "right",
+                "nodeId": "start",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": []
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 96,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Start",
+            "type": "manual",
+            "interval": 60,
+            "delay": 5,
+            "date": "",
+            "time": "00:00",
+            "url": "",
+            "shortcut": "",
+            "activeInInput": false,
+            "isUrlRegex": false,
+            "days": [],
+            "contextMenuName": "",
+            "contextTypes": [],
+            "parameters": [],
+            "preferParamsInTab": false,
+            "observeElement": {
+              "selector": "",
+              "baseSelector": "",
+              "matchPattern": "",
+              "targetOptions": {
+                "subtree": false,
+                "childList": true,
+                "attributes": false,
+                "attributeFilter": [],
+                "characterData": false
+              },
+              "baseElOptions": {
+                "subtree": false,
+                "childList": true,
+                "attributes": false,
+                "attributeFilter": [],
+                "characterData": false
+              }
+            }
+          },
+          "events": {},
+          "label": "trigger"
+        },
+        "targetNode": {
+          "id": "tab",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 388,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "tab-output-1",
+                "position": "right",
+                "nodeId": "tab",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "tab-input-1",
+                "position": "left",
+                "nodeId": "tab",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 388,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Open page",
+            "url": "https://example.com",
+            "userAgent": "",
+            "active": true,
+            "tabZoom": 1,
+            "inGroup": false,
+            "waitTabLoaded": true,
+            "updatePrevTab": false,
+            "customUserAgent": false
+          },
+          "events": {},
+          "label": "new-tab"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-tabtab-output-1-clickclick-input-1",
+        "type": "custom",
+        "source": "tab",
+        "target": "click",
+        "sourceHandle": "tab-output-1",
+        "targetHandle": "click-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 604,
+        "sourceY": 133,
+        "targetX": 664,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "tab",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 388,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "tab-output-1",
+                "position": "right",
+                "nodeId": "tab",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "tab-input-1",
+                "position": "left",
+                "nodeId": "tab",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 388,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Open page",
+            "url": "https://example.com",
+            "userAgent": "",
+            "active": true,
+            "tabZoom": 1,
+            "inGroup": false,
+            "waitTabLoaded": true,
+            "updatePrevTab": false,
+            "customUserAgent": false
+          },
+          "events": {},
+          "label": "new-tab"
+        },
+        "targetNode": {
+          "id": "click",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 680,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "click-output-1",
+                "position": "right",
+                "nodeId": "click",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "click-input-1",
+                "position": "left",
+                "nodeId": "click",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 680,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Click",
+            "findBy": "cssSelector",
+            "waitForSelector": true,
+            "waitSelectorTimeout": 5000,
+            "selector": "button.login",
+            "markEl": false,
+            "multiple": false
+          },
+          "events": {},
+          "label": "event-click"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-clickclick-output-1-texttext-input-1",
+        "type": "custom",
+        "source": "click",
+        "target": "text",
+        "sourceHandle": "click-output-1",
+        "targetHandle": "text-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 896,
+        "sourceY": 133,
+        "targetX": 956,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "click",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 680,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "click-output-1",
+                "position": "right",
+                "nodeId": "click",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "click-input-1",
+                "position": "left",
+                "nodeId": "click",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 680,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Click",
+            "findBy": "cssSelector",
+            "waitForSelector": true,
+            "waitSelectorTimeout": 5000,
+            "selector": "button.login",
+            "markEl": false,
+            "multiple": false
+          },
+          "events": {},
+          "label": "event-click"
+        },
+        "targetNode": {
+          "id": "text",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 972,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "text-output-1",
+                "position": "right",
+                "nodeId": "text",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "text-input-1",
+                "position": "left",
+                "nodeId": "text",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 972,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Get title",
+            "findBy": "cssSelector",
+            "waitForSelector": false,
+            "waitSelectorTimeout": 5000,
+            "selector": "h1",
+            "markEl": false,
+            "multiple": false,
+            "regex": "",
+            "prefixText": "",
+            "suffixText": "",
+            "regexExp": [],
+            "dataColumn": "Title",
+            "saveData": true,
+            "includeTags": false,
+            "addExtraRow": false,
+            "assignVariable": true,
+            "useTextContent": false,
+            "variableName": "title",
+            "extraRowValue": "",
+            "extraRowDataColumn": ""
+          },
+          "events": {},
+          "label": "get-text"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-texttext-output-1-formform-input-1",
+        "type": "custom",
+        "source": "text",
+        "target": "form",
+        "sourceHandle": "text-output-1",
+        "targetHandle": "form-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 1188,
+        "sourceY": 133,
+        "targetX": 1248,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "text",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 972,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "text-output-1",
+                "position": "right",
+                "nodeId": "text",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "text-input-1",
+                "position": "left",
+                "nodeId": "text",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 972,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Get title",
+            "findBy": "cssSelector",
+            "waitForSelector": false,
+            "waitSelectorTimeout": 5000,
+            "selector": "h1",
+            "markEl": false,
+            "multiple": false,
+            "regex": "",
+            "prefixText": "",
+            "suffixText": "",
+            "regexExp": [],
+            "dataColumn": "Title",
+            "saveData": true,
+            "includeTags": false,
+            "addExtraRow": false,
+            "assignVariable": true,
+            "useTextContent": false,
+            "variableName": "title",
+            "extraRowValue": "",
+            "extraRowDataColumn": ""
+          },
+          "events": {},
+          "label": "get-text"
+        },
+        "targetNode": {
+          "id": "form",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 1264,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "form-output-1",
+                "position": "right",
+                "nodeId": "form",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "form-input-1",
+                "position": "left",
+                "nodeId": "form",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 1264,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Fill name",
+            "findBy": "cssSelector",
+            "waitForSelector": false,
+            "waitSelectorTimeout": 5000,
+            "selector": "#name",
+            "markEl": false,
+            "multiple": false,
+            "selected": true,
+            "clearValue": true,
+            "getValue": false,
+            "saveData": false,
+            "dataColumn": "",
+            "selectOptionBy": "value",
+            "optionPosition": "1",
+            "value": "{{name}}",
+            "delay": 0,
+            "events": [],
+            "assignVariable": false,
+            "variableName": "",
+            "type": "text-field"
+          },
+          "events": {},
+          "label": "forms"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-formform-output-1-existsexists-input-1",
+        "type": "custom",
+        "source": "form",
+        "target": "exists",
+        "sourceHandle": "form-output-1",
+        "targetHandle": "exists-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 1480,
+        "sourceY": 133,
+        "targetX": 1540,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "form",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 1264,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "form-output-1",
+                "position": "right",
+                "nodeId": "form",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "form-input-1",
+                "position": "left",
+                "nodeId": "form",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 1264,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Fill name",
+            "findBy": "cssSelector",
+            "waitForSelector": false,
+            "waitSelectorTimeout": 5000,
+            "selector": "#name",
+            "markEl": false,
+            "multiple": false,
+            "selected": true,
+            "clearValue": true,
+            "getValue": false,
+            "saveData": false,
+            "dataColumn": "",
+            "selectOptionBy": "value",
+            "optionPosition": "1",
+            "value": "{{name}}",
+            "delay": 0,
+            "events": [],
+            "assignVariable": false,
+            "variableName": "",
+            "type": "text-field"
+          },
+          "events": {},
+          "label": "forms"
+        },
+        "targetNode": {
+          "id": "exists",
+          "type": "BlockElementExists",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 1556,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "exists-output-1",
+                "position": "right",
+                "nodeId": "exists",
+                "type": "source",
+                "x": 200,
+                "y": 18,
+                "width": 16,
+                "height": 16
+              },
+              {
+                "id": "exists-output-2",
+                "position": "right",
+                "nodeId": "exists",
+                "type": "source",
+                "x": 200,
+                "y": 50,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "exists-input-1",
+                "position": "left",
+                "nodeId": "exists",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 1556,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Has result",
+            "findBy": "cssSelector",
+            "selector": ".result",
+            "tryCount": 2,
+            "timeout": 500,
+            "markEl": false,
+            "throwError": false
+          },
+          "events": {},
+          "label": "element-exists"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-existsexists-output-1-condcond-input-1",
+        "type": "custom",
+        "source": "exists",
+        "target": "cond",
+        "sourceHandle": "exists-output-1",
+        "targetHandle": "cond-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 1772,
+        "sourceY": 133,
+        "targetX": 1832,
+        "targetY": 175.5,
+        "sourceNode": {
+          "id": "exists",
+          "type": "BlockElementExists",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 1556,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "exists-output-1",
+                "position": "right",
+                "nodeId": "exists",
+                "type": "source",
+                "x": 200,
+                "y": 18,
+                "width": 16,
+                "height": 16
+              },
+              {
+                "id": "exists-output-2",
+                "position": "right",
+                "nodeId": "exists",
+                "type": "source",
+                "x": 200,
+                "y": 50,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "exists-input-1",
+                "position": "left",
+                "nodeId": "exists",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 1556,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Has result",
+            "findBy": "cssSelector",
+            "selector": ".result",
+            "tryCount": 2,
+            "timeout": 500,
+            "markEl": false,
+            "throwError": false
+          },
+          "events": {},
+          "label": "element-exists"
+        },
+        "targetNode": {
+          "id": "cond",
+          "type": "BlockConditions",
+          "dimensions": {
+            "width": 256,
+            "height": 157
+          },
+          "computedPosition": {
+            "x": 1848,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "cond-output-found",
+                "position": "right",
+                "nodeId": "cond",
+                "type": "source",
+                "x": 264,
+                "y": 18,
+                "width": 16,
+                "height": 16
+              },
+              {
+                "id": "cond-output-missing",
+                "position": "right",
+                "nodeId": "cond",
+                "type": "source",
+                "x": 264,
+                "y": 60,
+                "width": 16,
+                "height": 16
+              },
+              {
+                "id": "cond-output-fallback",
+                "position": "right",
+                "nodeId": "cond",
+                "type": "source",
+                "x": 264,
+                "y": 102,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "cond-input-1",
+                "position": "left",
+                "nodeId": "cond",
+                "type": "target",
+                "x": -24,
+                "y": 70.5,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 1848,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Check result",
+            "conditions": [
+              {
+                "id": "found",
+                "name": "Found",
+                "conditions": []
+              },
+              {
+                "id": "missing",
+                "name": "Missing",
+                "conditions": []
+              }
+            ],
+            "retryConditions": false,
+            "retryCount": 10,
+            "retryTimeout": 1000
+          },
+          "events": {},
+          "label": "conditions"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-existsexists-output-2-backback-input-1",
+        "type": "custom",
+        "source": "exists",
+        "target": "back",
+        "sourceHandle": "exists-output-2",
+        "targetHandle": "back-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 1772,
+        "sourceY": 175,
+        "targetX": 8548,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "exists",
+          "type": "BlockElementExists",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 1556,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "exists-output-1",
+                "position": "right",
+                "nodeId": "exists",
+                "type": "source",
+                "x": 200,
+                "y": 18,
+                "width": 16,
+                "height": 16
+              },
+              {
+                "id": "exists-output-2",
+                "position": "right",
+                "nodeId": "exists",
+                "type": "source",
+                "x": 200,
+                "y": 50,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "exists-input-1",
+                "position": "left",
+                "nodeId": "exists",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 1556,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Has result",
+            "findBy": "cssSelector",
+            "selector": ".result",
+            "tryCount": 2,
+            "timeout": 500,
+            "markEl": false,
+            "throwError": false
+          },
+          "events": {},
+          "label": "element-exists"
+        },
+        "targetNode": {
+          "id": "back",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 8564,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "back-output-1",
+                "position": "right",
+                "nodeId": "back",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "back-input-1",
+                "position": "left",
+                "nodeId": "back",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 8564,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Go back"
+          },
+          "events": {},
+          "label": "go-back"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-condcond-output-found-jsjs-input-1",
+        "type": "custom",
+        "source": "cond",
+        "target": "js",
+        "sourceHandle": "cond-output-found",
+        "targetHandle": "js-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 2128,
+        "sourceY": 154.5,
+        "targetX": 2124,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "cond",
+          "type": "BlockConditions",
+          "dimensions": {
+            "width": 256,
+            "height": 157
+          },
+          "computedPosition": {
+            "x": 1848,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "cond-output-found",
+                "position": "right",
+                "nodeId": "cond",
+                "type": "source",
+                "x": 264,
+                "y": 18,
+                "width": 16,
+                "height": 16
+              },
+              {
+                "id": "cond-output-missing",
+                "position": "right",
+                "nodeId": "cond",
+                "type": "source",
+                "x": 264,
+                "y": 60,
+                "width": 16,
+                "height": 16
+              },
+              {
+                "id": "cond-output-fallback",
+                "position": "right",
+                "nodeId": "cond",
+                "type": "source",
+                "x": 264,
+                "y": 102,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "cond-input-1",
+                "position": "left",
+                "nodeId": "cond",
+                "type": "target",
+                "x": -24,
+                "y": 70.5,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 1848,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Check result",
+            "conditions": [
+              {
+                "id": "found",
+                "name": "Found",
+                "conditions": []
+              },
+              {
+                "id": "missing",
+                "name": "Missing",
+                "conditions": []
+              }
+            ],
+            "retryConditions": false,
+            "retryCount": 10,
+            "retryTimeout": 1000
+          },
+          "events": {},
+          "label": "conditions"
+        },
+        "targetNode": {
+          "id": "js",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 2140,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "js-output-1",
+                "position": "right",
+                "nodeId": "js",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "js-input-1",
+                "position": "left",
+                "nodeId": "js",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 2140,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Process data",
+            "timeout": 20000,
+            "context": "website",
+            "code": "automaSetVariable(\"ready\", true);\nautomaNextBlock();",
+            "preloadScripts": [],
+            "everyNewTab": false,
+            "runBeforeLoad": false
+          },
+          "events": {},
+          "label": "javascript-code"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-condcond-output-missing-notifynotify-input-1",
+        "type": "custom",
+        "source": "cond",
+        "target": "notify",
+        "sourceHandle": "cond-output-missing",
+        "targetHandle": "notify-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 2128,
+        "sourceY": 196.5,
+        "targetX": 5920,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "cond",
+          "type": "BlockConditions",
+          "dimensions": {
+            "width": 256,
+            "height": 157
+          },
+          "computedPosition": {
+            "x": 1848,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "cond-output-found",
+                "position": "right",
+                "nodeId": "cond",
+                "type": "source",
+                "x": 264,
+                "y": 18,
+                "width": 16,
+                "height": 16
+              },
+              {
+                "id": "cond-output-missing",
+                "position": "right",
+                "nodeId": "cond",
+                "type": "source",
+                "x": 264,
+                "y": 60,
+                "width": 16,
+                "height": 16
+              },
+              {
+                "id": "cond-output-fallback",
+                "position": "right",
+                "nodeId": "cond",
+                "type": "source",
+                "x": 264,
+                "y": 102,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "cond-input-1",
+                "position": "left",
+                "nodeId": "cond",
+                "type": "target",
+                "x": -24,
+                "y": 70.5,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 1848,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Check result",
+            "conditions": [
+              {
+                "id": "found",
+                "name": "Found",
+                "conditions": []
+              },
+              {
+                "id": "missing",
+                "name": "Missing",
+                "conditions": []
+              }
+            ],
+            "retryConditions": false,
+            "retryCount": 10,
+            "retryTimeout": 1000
+          },
+          "events": {},
+          "label": "conditions"
+        },
+        "targetNode": {
+          "id": "notify",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 5936,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "notify-output-1",
+                "position": "right",
+                "nodeId": "notify",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "notify-input-1",
+                "position": "left",
+                "nodeId": "notify",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 5936,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Done",
+            "message": "Workflow complete",
+            "iconUrl": "",
+            "imageUrl": "",
+            "title": "Done"
+          },
+          "events": {},
+          "label": "notification"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-jsjs-output-1-looploop-input-1",
+        "type": "custom",
+        "source": "js",
+        "target": "loop",
+        "sourceHandle": "js-output-1",
+        "targetHandle": "loop-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 2356,
+        "sourceY": 133,
+        "targetX": 2416,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "js",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 2140,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "js-output-1",
+                "position": "right",
+                "nodeId": "js",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "js-input-1",
+                "position": "left",
+                "nodeId": "js",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 2140,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Process data",
+            "timeout": 20000,
+            "context": "website",
+            "code": "automaSetVariable(\"ready\", true);\nautomaNextBlock();",
+            "preloadScripts": [],
+            "everyNewTab": false,
+            "runBeforeLoad": false
+          },
+          "events": {},
+          "label": "javascript-code"
+        },
+        "targetNode": {
+          "id": "loop",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 2432,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "loop-output-1",
+                "position": "right",
+                "nodeId": "loop",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "loop-input-1",
+                "position": "left",
+                "nodeId": "loop",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 2432,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "loopId": "rows",
+            "maxLoop": 0,
+            "toNumber": 10,
+            "fromNumber": 1,
+            "startIndex": 0,
+            "loopData": "[]",
+            "description": "Loop rows",
+            "variableName": "",
+            "referenceKey": "",
+            "reverseLoop": false,
+            "elementSelector": "",
+            "waitForSelector": false,
+            "waitSelectorTimeout": 5000,
+            "resumeLastWorkflow": false,
+            "loopThrough": "data-columns"
+          },
+          "events": {},
+          "label": "loop-data"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-looploop-output-1-loopElloopEl-input-1",
+        "type": "custom",
+        "source": "loop",
+        "target": "loopEl",
+        "sourceHandle": "loop-output-1",
+        "targetHandle": "loopEl-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 2648,
+        "sourceY": 133,
+        "targetX": 2708,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "loop",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 2432,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "loop-output-1",
+                "position": "right",
+                "nodeId": "loop",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "loop-input-1",
+                "position": "left",
+                "nodeId": "loop",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 2432,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "loopId": "rows",
+            "maxLoop": 0,
+            "toNumber": 10,
+            "fromNumber": 1,
+            "startIndex": 0,
+            "loopData": "[]",
+            "description": "Loop rows",
+            "variableName": "",
+            "referenceKey": "",
+            "reverseLoop": false,
+            "elementSelector": "",
+            "waitForSelector": false,
+            "waitSelectorTimeout": 5000,
+            "resumeLastWorkflow": false,
+            "loopThrough": "data-columns"
+          },
+          "events": {},
+          "label": "loop-data"
+        },
+        "targetNode": {
+          "id": "loopEl",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 2724,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "loopEl-output-1",
+                "position": "right",
+                "nodeId": "loopEl",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "loopEl-input-1",
+                "position": "left",
+                "nodeId": "loopEl",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 2724,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "loopId": "items",
+            "selector": ".item",
+            "maxLoop": "0",
+            "description": "Loop items",
+            "reverseLoop": false,
+            "actionElSelector": "",
+            "findBy": "cssSelector",
+            "actionElMaxWaitTime": 5,
+            "actionPageMaxWaitTime": 10,
+            "loadMoreAction": "none",
+            "scrollToBottom": true,
+            "waitForSelector": false,
+            "waitSelectorTimeout": 5000
+          },
+          "events": {},
+          "label": "loop-elements"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-loopElloopEl-output-1-waitwait-input-1",
+        "type": "custom",
+        "source": "loopEl",
+        "target": "wait",
+        "sourceHandle": "loopEl-output-1",
+        "targetHandle": "wait-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 2940,
+        "sourceY": 133,
+        "targetX": 3000,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "loopEl",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 2724,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "loopEl-output-1",
+                "position": "right",
+                "nodeId": "loopEl",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "loopEl-input-1",
+                "position": "left",
+                "nodeId": "loopEl",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 2724,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "loopId": "items",
+            "selector": ".item",
+            "maxLoop": "0",
+            "description": "Loop items",
+            "reverseLoop": false,
+            "actionElSelector": "",
+            "findBy": "cssSelector",
+            "actionElMaxWaitTime": 5,
+            "actionPageMaxWaitTime": 10,
+            "loadMoreAction": "none",
+            "scrollToBottom": true,
+            "waitForSelector": false,
+            "waitSelectorTimeout": 5000
+          },
+          "events": {},
+          "label": "loop-elements"
+        },
+        "targetNode": {
+          "id": "wait",
+          "type": "BlockDelay",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 3016,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "wait-output-1",
+                "position": "right",
+                "nodeId": "wait",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "wait-input-1",
+                "position": "left",
+                "nodeId": "wait",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 3016,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "time": 1000,
+            "description": "Wait"
+          },
+          "events": {},
+          "label": "delay"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-waitwait-output-1-mapmap-input-1",
+        "type": "custom",
+        "source": "wait",
+        "target": "map",
+        "sourceHandle": "wait-output-1",
+        "targetHandle": "map-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 3232,
+        "sourceY": 133,
+        "targetX": 3292,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "wait",
+          "type": "BlockDelay",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 3016,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "wait-output-1",
+                "position": "right",
+                "nodeId": "wait",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "wait-input-1",
+                "position": "left",
+                "nodeId": "wait",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 3016,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "time": 1000,
+            "description": "Wait"
+          },
+          "events": {},
+          "label": "delay"
+        },
+        "targetNode": {
+          "id": "map",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 3308,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "map-output-1",
+                "position": "right",
+                "nodeId": "map",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "map-input-1",
+                "position": "left",
+                "nodeId": "map",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 3308,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Map data",
+            "dataSource": "table",
+            "sources": [
+              {
+                "id": "s1",
+                "name": "Title",
+                "destinations": [
+                  {
+                    "id": "d1",
+                    "name": "title"
+                  }
+                ]
+              }
+            ],
+            "varSourceName": "",
+            "dataColumn": "",
+            "saveData": false,
+            "assignVariable": false,
+            "variableName": ""
+          },
+          "events": {},
+          "label": "data-mapping"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-mapmap-output-1-insertinsert-input-1",
+        "type": "custom",
+        "source": "map",
+        "target": "insert",
+        "sourceHandle": "map-output-1",
+        "targetHandle": "insert-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 3524,
+        "sourceY": 133,
+        "targetX": 3584,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "map",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 3308,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "map-output-1",
+                "position": "right",
+                "nodeId": "map",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "map-input-1",
+                "position": "left",
+                "nodeId": "map",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 3308,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Map data",
+            "dataSource": "table",
+            "sources": [
+              {
+                "id": "s1",
+                "name": "Title",
+                "destinations": [
+                  {
+                    "id": "d1",
+                    "name": "title"
+                  }
+                ]
+              }
+            ],
+            "varSourceName": "",
+            "dataColumn": "",
+            "saveData": false,
+            "assignVariable": false,
+            "variableName": ""
+          },
+          "events": {},
+          "label": "data-mapping"
+        },
+        "targetNode": {
+          "id": "insert",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 3600,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "insert-output-1",
+                "position": "right",
+                "nodeId": "insert",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "insert-input-1",
+                "position": "left",
+                "nodeId": "insert",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 3600,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Save row",
+            "dataList": [
+              {
+                "name": "Result",
+                "type": "table",
+                "value": "{{title}}"
+              }
+            ]
+          },
+          "events": {},
+          "label": "insert-data"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-insertinsert-output-1-scrollscroll-input-1",
+        "type": "custom",
+        "source": "insert",
+        "target": "scroll",
+        "sourceHandle": "insert-output-1",
+        "targetHandle": "scroll-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 3816,
+        "sourceY": 133,
+        "targetX": 3876,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "insert",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 3600,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "insert-output-1",
+                "position": "right",
+                "nodeId": "insert",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "insert-input-1",
+                "position": "left",
+                "nodeId": "insert",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 3600,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Save row",
+            "dataList": [
+              {
+                "name": "Result",
+                "type": "table",
+                "value": "{{title}}"
+              }
+            ]
+          },
+          "events": {},
+          "label": "insert-data"
+        },
+        "targetNode": {
+          "id": "scroll",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 3892,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "scroll-output-1",
+                "position": "right",
+                "nodeId": "scroll",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "scroll-input-1",
+                "position": "left",
+                "nodeId": "scroll",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 3892,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Scroll page",
+            "findBy": "cssSelector",
+            "waitForSelector": false,
+            "waitSelectorTimeout": 5000,
+            "selector": "html",
+            "markEl": false,
+            "multiple": false,
+            "scrollY": 500,
+            "scrollX": 0,
+            "incX": false,
+            "incY": false,
+            "smooth": false,
+            "scrollIntoView": false
+          },
+          "events": {},
+          "label": "element-scroll"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-scrollscroll-output-1-attrattr-input-1",
+        "type": "custom",
+        "source": "scroll",
+        "target": "attr",
+        "sourceHandle": "scroll-output-1",
+        "targetHandle": "attr-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 4108,
+        "sourceY": 133,
+        "targetX": 4168,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "scroll",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 3892,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "scroll-output-1",
+                "position": "right",
+                "nodeId": "scroll",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "scroll-input-1",
+                "position": "left",
+                "nodeId": "scroll",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 3892,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Scroll page",
+            "findBy": "cssSelector",
+            "waitForSelector": false,
+            "waitSelectorTimeout": 5000,
+            "selector": "html",
+            "markEl": false,
+            "multiple": false,
+            "scrollY": 500,
+            "scrollX": 0,
+            "incX": false,
+            "incY": false,
+            "smooth": false,
+            "scrollIntoView": false
+          },
+          "events": {},
+          "label": "element-scroll"
+        },
+        "targetNode": {
+          "id": "attr",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 4184,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "attr-output-1",
+                "position": "right",
+                "nodeId": "attr",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "attr-input-1",
+                "position": "left",
+                "nodeId": "attr",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 4184,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Get href",
+            "findBy": "cssSelector",
+            "waitForSelector": false,
+            "waitSelectorTimeout": 5000,
+            "selector": "a.next",
+            "markEl": false,
+            "multiple": false,
+            "attributeValue": "",
+            "attributeName": "href",
+            "assignVariable": true,
+            "variableName": "nextUrl",
+            "dataColumn": "",
+            "saveData": true,
+            "action": "get",
+            "addExtraRow": false,
+            "extraRowValue": "",
+            "extraRowDataColumn": ""
+          },
+          "events": {},
+          "label": "attribute-value"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-attrattr-output-1-presspress-input-1",
+        "type": "custom",
+        "source": "attr",
+        "target": "press",
+        "sourceHandle": "attr-output-1",
+        "targetHandle": "press-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 4400,
+        "sourceY": 133,
+        "targetX": 4460,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "attr",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 4184,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "attr-output-1",
+                "position": "right",
+                "nodeId": "attr",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "attr-input-1",
+                "position": "left",
+                "nodeId": "attr",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 4184,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Get href",
+            "findBy": "cssSelector",
+            "waitForSelector": false,
+            "waitSelectorTimeout": 5000,
+            "selector": "a.next",
+            "markEl": false,
+            "multiple": false,
+            "attributeValue": "",
+            "attributeName": "href",
+            "assignVariable": true,
+            "variableName": "nextUrl",
+            "dataColumn": "",
+            "saveData": true,
+            "action": "get",
+            "addExtraRow": false,
+            "extraRowValue": "",
+            "extraRowDataColumn": ""
+          },
+          "events": {},
+          "label": "attribute-value"
+        },
+        "targetNode": {
+          "id": "press",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 4476,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "press-output-1",
+                "position": "right",
+                "nodeId": "press",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "press-input-1",
+                "position": "left",
+                "nodeId": "press",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 4476,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "keys": "Enter",
+            "selector": "",
+            "pressTime": "0",
+            "description": "Press Enter",
+            "keysToPress": "",
+            "action": "press-key"
+          },
+          "events": {},
+          "label": "press-key"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-presspress-output-1-shotshot-input-1",
+        "type": "custom",
+        "source": "press",
+        "target": "shot",
+        "sourceHandle": "press-output-1",
+        "targetHandle": "shot-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 4692,
+        "sourceY": 133,
+        "targetX": 4752,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "press",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 4476,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "press-output-1",
+                "position": "right",
+                "nodeId": "press",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "press-input-1",
+                "position": "left",
+                "nodeId": "press",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 4476,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "keys": "Enter",
+            "selector": "",
+            "pressTime": "0",
+            "description": "Press Enter",
+            "keysToPress": "",
+            "action": "press-key"
+          },
+          "events": {},
+          "label": "press-key"
+        },
+        "targetNode": {
+          "id": "shot",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 4768,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "shot-output-1",
+                "position": "right",
+                "nodeId": "shot",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "shot-input-1",
+                "position": "left",
+                "nodeId": "shot",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 4768,
+            "y": 97
+          },
+          "data": {
+            "description": "Capture",
+            "disableBlock": false,
+            "fileName": "result",
+            "ext": "png",
+            "quality": 100,
+            "dataColumn": "",
+            "variableName": "",
+            "selector": ".result",
+            "fullPage": false,
+            "saveToColumn": false,
+            "saveToComputer": true,
+            "assignVariable": false,
+            "captureActiveTab": true,
+            "type": "element"
+          },
+          "events": {},
+          "label": "take-screenshot"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-shotshot-output-1-copycopy-input-1",
+        "type": "custom",
+        "source": "shot",
+        "target": "copy",
+        "sourceHandle": "shot-output-1",
+        "targetHandle": "copy-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 4984,
+        "sourceY": 133,
+        "targetX": 5044,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "shot",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 4768,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "shot-output-1",
+                "position": "right",
+                "nodeId": "shot",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "shot-input-1",
+                "position": "left",
+                "nodeId": "shot",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 4768,
+            "y": 97
+          },
+          "data": {
+            "description": "Capture",
+            "disableBlock": false,
+            "fileName": "result",
+            "ext": "png",
+            "quality": 100,
+            "dataColumn": "",
+            "variableName": "",
+            "selector": ".result",
+            "fullPage": false,
+            "saveToColumn": false,
+            "saveToComputer": true,
+            "assignVariable": false,
+            "captureActiveTab": true,
+            "type": "element"
+          },
+          "events": {},
+          "label": "take-screenshot"
+        },
+        "targetNode": {
+          "id": "copy",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 5060,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "copy-output-1",
+                "position": "right",
+                "nodeId": "copy",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "copy-input-1",
+                "position": "left",
+                "nodeId": "copy",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 5060,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Copy text",
+            "type": "insert",
+            "assignVariable": false,
+            "variableName": "",
+            "saveData": true,
+            "dataColumn": "",
+            "dataToCopy": "{{title}}",
+            "copySelectedText": false
+          },
+          "events": {},
+          "label": "clipboard"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-copycopy-output-1-incinc-input-1",
+        "type": "custom",
+        "source": "copy",
+        "target": "inc",
+        "sourceHandle": "copy-output-1",
+        "targetHandle": "inc-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 5276,
+        "sourceY": 133,
+        "targetX": 5336,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "copy",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 5060,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "copy-output-1",
+                "position": "right",
+                "nodeId": "copy",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "copy-input-1",
+                "position": "left",
+                "nodeId": "copy",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 5060,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Copy text",
+            "type": "insert",
+            "assignVariable": false,
+            "variableName": "",
+            "saveData": true,
+            "dataColumn": "",
+            "dataToCopy": "{{title}}",
+            "copySelectedText": false
+          },
+          "events": {},
+          "label": "clipboard"
+        },
+        "targetNode": {
+          "id": "inc",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 5352,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "inc-output-1",
+                "position": "right",
+                "nodeId": "inc",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "inc-input-1",
+                "position": "left",
+                "nodeId": "inc",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 5352,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Count",
+            "variableName": "page",
+            "increaseBy": 1
+          },
+          "events": {},
+          "label": "increase-variable"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-incinc-output-1-webhookwebhook-input-1",
+        "type": "custom",
+        "source": "inc",
+        "target": "webhook",
+        "sourceHandle": "inc-output-1",
+        "targetHandle": "webhook-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 5568,
+        "sourceY": 133,
+        "targetX": 5628,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "inc",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 5352,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "inc-output-1",
+                "position": "right",
+                "nodeId": "inc",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "inc-input-1",
+                "position": "left",
+                "nodeId": "inc",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 5352,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Count",
+            "variableName": "page",
+            "increaseBy": 1
+          },
+          "events": {},
+          "label": "increase-variable"
+        },
+        "targetNode": {
+          "id": "webhook",
+          "type": "BlockBasicWithFallback",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 5644,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "webhook-output-1",
+                "position": "right",
+                "nodeId": "webhook",
+                "type": "source",
+                "x": 200,
+                "y": 18,
+                "width": 16,
+                "height": 16
+              },
+              {
+                "id": "webhook-output-fallback",
+                "position": "right",
+                "nodeId": "webhook",
+                "type": "source",
+                "x": 200,
+                "y": 50,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "webhook-input-1",
+                "position": "left",
+                "nodeId": "webhook",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 5644,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Send result",
+            "url": "https://example.com/hook",
+            "body": "{\"title\":\"{{title}}\"}",
+            "headers": [],
+            "method": "POST",
+            "timeout": 10000,
+            "dataPath": "",
+            "contentType": "json",
+            "variableName": "",
+            "assignVariable": false,
+            "saveData": false,
+            "dataColumn": "",
+            "responseType": "json"
+          },
+          "events": {},
+          "label": "webhook"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-webhookwebhook-output-1-notifynotify-input-1",
+        "type": "custom",
+        "source": "webhook",
+        "target": "notify",
+        "sourceHandle": "webhook-output-1",
+        "targetHandle": "notify-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 5860,
+        "sourceY": 133,
+        "targetX": 5920,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "webhook",
+          "type": "BlockBasicWithFallback",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 5644,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "webhook-output-1",
+                "position": "right",
+                "nodeId": "webhook",
+                "type": "source",
+                "x": 200,
+                "y": 18,
+                "width": 16,
+                "height": 16
+              },
+              {
+                "id": "webhook-output-fallback",
+                "position": "right",
+                "nodeId": "webhook",
+                "type": "source",
+                "x": 200,
+                "y": 50,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "webhook-input-1",
+                "position": "left",
+                "nodeId": "webhook",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 5644,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Send result",
+            "url": "https://example.com/hook",
+            "body": "{\"title\":\"{{title}}\"}",
+            "headers": [],
+            "method": "POST",
+            "timeout": 10000,
+            "dataPath": "",
+            "contentType": "json",
+            "variableName": "",
+            "assignVariable": false,
+            "saveData": false,
+            "dataColumn": "",
+            "responseType": "json"
+          },
+          "events": {},
+          "label": "webhook"
+        },
+        "targetNode": {
+          "id": "notify",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 5936,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "notify-output-1",
+                "position": "right",
+                "nodeId": "notify",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "notify-input-1",
+                "position": "left",
+                "nodeId": "notify",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 5936,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Done",
+            "message": "Workflow complete",
+            "iconUrl": "",
+            "imageUrl": "",
+            "title": "Done"
+          },
+          "events": {},
+          "label": "notification"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-notifynotify-output-1-executeexecute-input-1",
+        "type": "custom",
+        "source": "notify",
+        "target": "execute",
+        "sourceHandle": "notify-output-1",
+        "targetHandle": "execute-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 6152,
+        "sourceY": 133,
+        "targetX": 6212,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "notify",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 5936,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "notify-output-1",
+                "position": "right",
+                "nodeId": "notify",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "notify-input-1",
+                "position": "left",
+                "nodeId": "notify",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 5936,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Done",
+            "message": "Workflow complete",
+            "iconUrl": "",
+            "imageUrl": "",
+            "title": "Done"
+          },
+          "events": {},
+          "label": "notification"
+        },
+        "targetNode": {
+          "id": "execute",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 6228,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "execute-output-1",
+                "position": "right",
+                "nodeId": "execute",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "execute-input-1",
+                "position": "left",
+                "nodeId": "execute",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 6228,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "executeId": "run1",
+            "workflowId": "child-workflow",
+            "globalData": "",
+            "description": "Run child",
+            "insertAllVars": false,
+            "insertAllGlobalData": false,
+            "insertVars": ""
+          },
+          "events": {},
+          "label": "execute-workflow"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-executeexecute-output-1-whilewhile-input-1",
+        "type": "custom",
+        "source": "execute",
+        "target": "while",
+        "sourceHandle": "execute-output-1",
+        "targetHandle": "while-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 6444,
+        "sourceY": 133,
+        "targetX": 6504,
+        "targetY": 175.5,
+        "sourceNode": {
+          "id": "execute",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 6228,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "execute-output-1",
+                "position": "right",
+                "nodeId": "execute",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "execute-input-1",
+                "position": "left",
+                "nodeId": "execute",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 6228,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "executeId": "run1",
+            "workflowId": "child-workflow",
+            "globalData": "",
+            "description": "Run child",
+            "insertAllVars": false,
+            "insertAllGlobalData": false,
+            "insertVars": ""
+          },
+          "events": {},
+          "label": "execute-workflow"
+        },
+        "targetNode": {
+          "id": "while",
+          "type": "BlockBasicWithFallback",
+          "dimensions": {
+            "width": 256,
+            "height": 157
+          },
+          "computedPosition": {
+            "x": 6520,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "while-output-1",
+                "position": "right",
+                "nodeId": "while",
+                "type": "source",
+                "x": 264,
+                "y": 18,
+                "width": 16,
+                "height": 16
+              },
+              {
+                "id": "while-output-fallback",
+                "position": "right",
+                "nodeId": "while",
+                "type": "source",
+                "x": 264,
+                "y": 60,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "while-input-1",
+                "position": "left",
+                "nodeId": "while",
+                "type": "target",
+                "x": -24,
+                "y": 70.5,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 6520,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Repeat",
+            "conditions": [
+              {
+                "id": "again",
+                "name": "Again",
+                "conditions": []
+              }
+            ],
+            "retryConditions": false,
+            "retryCount": 10,
+            "retryTimeout": 1000
+          },
+          "events": {},
+          "label": "while-loop"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-whilewhile-output-1-switchswitch-input-1",
+        "type": "custom",
+        "source": "while",
+        "target": "switch",
+        "sourceHandle": "while-output-1",
+        "targetHandle": "switch-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 6800,
+        "sourceY": 175.5,
+        "targetX": 6796,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "while",
+          "type": "BlockBasicWithFallback",
+          "dimensions": {
+            "width": 256,
+            "height": 157
+          },
+          "computedPosition": {
+            "x": 6520,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "while-output-1",
+                "position": "right",
+                "nodeId": "while",
+                "type": "source",
+                "x": 264,
+                "y": 18,
+                "width": 16,
+                "height": 16
+              },
+              {
+                "id": "while-output-fallback",
+                "position": "right",
+                "nodeId": "while",
+                "type": "source",
+                "x": 264,
+                "y": 60,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "while-input-1",
+                "position": "left",
+                "nodeId": "while",
+                "type": "target",
+                "x": -24,
+                "y": 70.5,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 6520,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Repeat",
+            "conditions": [
+              {
+                "id": "again",
+                "name": "Again",
+                "conditions": []
+              }
+            ],
+            "retryConditions": false,
+            "retryCount": 10,
+            "retryTimeout": 1000
+          },
+          "events": {},
+          "label": "while-loop"
+        },
+        "targetNode": {
+          "id": "switch",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 6812,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "switch-output-1",
+                "position": "right",
+                "nodeId": "switch",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "switch-input-1",
+                "position": "left",
+                "nodeId": "switch",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 6812,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Find tab",
+            "url": "",
+            "tabIndex": 0,
+            "tabTitle": "Example",
+            "matchPattern": "",
+            "activeTab": true,
+            "createIfNoMatch": false,
+            "findTabBy": "tab-title"
+          },
+          "events": {},
+          "label": "switch-tab"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-whilewhile-output-fallback-exportexport-input-1",
+        "type": "custom",
+        "source": "while",
+        "target": "export",
+        "sourceHandle": "while-output-fallback",
+        "targetHandle": "export-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 6800,
+        "sourceY": 217.5,
+        "targetX": 9424,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "while",
+          "type": "BlockBasicWithFallback",
+          "dimensions": {
+            "width": 256,
+            "height": 157
+          },
+          "computedPosition": {
+            "x": 6520,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "while-output-1",
+                "position": "right",
+                "nodeId": "while",
+                "type": "source",
+                "x": 264,
+                "y": 18,
+                "width": 16,
+                "height": 16
+              },
+              {
+                "id": "while-output-fallback",
+                "position": "right",
+                "nodeId": "while",
+                "type": "source",
+                "x": 264,
+                "y": 60,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "while-input-1",
+                "position": "left",
+                "nodeId": "while",
+                "type": "target",
+                "x": -24,
+                "y": 70.5,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 6520,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Repeat",
+            "conditions": [
+              {
+                "id": "again",
+                "name": "Again",
+                "conditions": []
+              }
+            ],
+            "retryConditions": false,
+            "retryCount": 10,
+            "retryTimeout": 1000
+          },
+          "events": {},
+          "label": "while-loop"
+        },
+        "targetNode": {
+          "id": "export",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 9440,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "export-output-1",
+                "position": "right",
+                "nodeId": "export",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "export-input-1",
+                "position": "left",
+                "nodeId": "export",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 9440,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "name": "result",
+            "refKey": "",
+            "type": "json",
+            "description": "Export JSON",
+            "variableName": "",
+            "csvDelimiter": ",",
+            "addBOMHeader": true,
+            "onConflict": "uniquify",
+            "dataToExport": "data-columns"
+          },
+          "events": {},
+          "label": "export-data"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-switchswitch-output-1-windowwindow-input-1",
+        "type": "custom",
+        "source": "switch",
+        "target": "window",
+        "sourceHandle": "switch-output-1",
+        "targetHandle": "window-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 7028,
+        "sourceY": 133,
+        "targetX": 7088,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "switch",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 6812,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "switch-output-1",
+                "position": "right",
+                "nodeId": "switch",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "switch-input-1",
+                "position": "left",
+                "nodeId": "switch",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 6812,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Find tab",
+            "url": "",
+            "tabIndex": 0,
+            "tabTitle": "Example",
+            "matchPattern": "",
+            "activeTab": true,
+            "createIfNoMatch": false,
+            "findTabBy": "tab-title"
+          },
+          "events": {},
+          "label": "switch-tab"
+        },
+        "targetNode": {
+          "id": "window",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 7104,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "window-output-1",
+                "position": "right",
+                "nodeId": "window",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "window-input-1",
+                "position": "left",
+                "nodeId": "window",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 7104,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "New window",
+            "top": 0,
+            "left": 0,
+            "width": 800,
+            "url": "",
+            "height": 600,
+            "type": "popup",
+            "incognito": false,
+            "windowState": "normal"
+          },
+          "events": {},
+          "label": "new-window"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-windowwindow-output-1-uploadupload-input-1",
+        "type": "custom",
+        "source": "window",
+        "target": "upload",
+        "sourceHandle": "window-output-1",
+        "targetHandle": "upload-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 7320,
+        "sourceY": 133,
+        "targetX": 7380,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "window",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 7104,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "window-output-1",
+                "position": "right",
+                "nodeId": "window",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "window-input-1",
+                "position": "left",
+                "nodeId": "window",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 7104,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "New window",
+            "top": 0,
+            "left": 0,
+            "width": 800,
+            "url": "",
+            "height": 600,
+            "type": "popup",
+            "incognito": false,
+            "windowState": "normal"
+          },
+          "events": {},
+          "label": "new-window"
+        },
+        "targetNode": {
+          "id": "upload",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 7396,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "upload-output-1",
+                "position": "right",
+                "nodeId": "upload",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "upload-input-1",
+                "position": "left",
+                "nodeId": "upload",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 7396,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "findBy": "cssSelector",
+            "waitForSelector": false,
+            "waitSelectorTimeout": 5000,
+            "selector": "input[type=file]",
+            "filePaths": [
+              "C:/tmp/test.pdf"
+            ],
+            "description": "Upload file"
+          },
+          "events": {},
+          "label": "upload-file"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-uploadupload-output-1-downloaddownload-input-1",
+        "type": "custom",
+        "source": "upload",
+        "target": "download",
+        "sourceHandle": "upload-output-1",
+        "targetHandle": "download-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 7612,
+        "sourceY": 133,
+        "targetX": 7672,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "upload",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 7396,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "upload-output-1",
+                "position": "right",
+                "nodeId": "upload",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "upload-input-1",
+                "position": "left",
+                "nodeId": "upload",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 7396,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "findBy": "cssSelector",
+            "waitForSelector": false,
+            "waitSelectorTimeout": 5000,
+            "selector": "input[type=file]",
+            "filePaths": [
+              "C:/tmp/test.pdf"
+            ],
+            "description": "Upload file"
+          },
+          "events": {},
+          "label": "upload-file"
+        },
+        "targetNode": {
+          "id": "download",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 7688,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "download-output-1",
+                "position": "right",
+                "nodeId": "download",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "download-input-1",
+                "position": "left",
+                "nodeId": "download",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 7688,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Handle file",
+            "filename": "result",
+            "timeout": 20000,
+            "onConflict": "uniquify",
+            "waitForDownload": true,
+            "dataColumn": "",
+            "saveData": true,
+            "assignVariable": false,
+            "variableName": "",
+            "downloadId": ""
+          },
+          "events": {},
+          "label": "handle-download"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-downloaddownload-output-1-breakbreak-input-1",
+        "type": "custom",
+        "source": "download",
+        "target": "break",
+        "sourceHandle": "download-output-1",
+        "targetHandle": "break-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 7904,
+        "sourceY": 133,
+        "targetX": 7964,
+        "targetY": 172.5,
+        "sourceNode": {
+          "id": "download",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 7688,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "download-output-1",
+                "position": "right",
+                "nodeId": "download",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "download-input-1",
+                "position": "left",
+                "nodeId": "download",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 7688,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Handle file",
+            "filename": "result",
+            "timeout": 20000,
+            "onConflict": "uniquify",
+            "waitForDownload": true,
+            "dataColumn": "",
+            "saveData": true,
+            "assignVariable": false,
+            "variableName": "",
+            "downloadId": ""
+          },
+          "events": {},
+          "label": "handle-download"
+        },
+        "targetNode": {
+          "id": "break",
+          "type": "BlockLoopBreakpoint",
+          "dimensions": {
+            "width": 192,
+            "height": 151
+          },
+          "computedPosition": {
+            "x": 7980,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "break-output-1",
+                "position": "right",
+                "nodeId": "break",
+                "type": "source",
+                "x": 200,
+                "y": 67.5,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "break-input-1",
+                "position": "left",
+                "nodeId": "break",
+                "type": "target",
+                "x": -24,
+                "y": 67.5,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 7980,
+            "y": 97
+          },
+          "data": {
+            "clearLoop": false,
+            "disableBlock": false,
+            "loopId": "rows",
+            "description": "Loop back"
+          },
+          "events": {},
+          "label": "loop-breakpoint"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-breakbreak-output-1-looploop-input-1",
+        "type": "custom",
+        "source": "break",
+        "target": "loop",
+        "sourceHandle": "break-output-1",
+        "targetHandle": "loop-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 8196,
+        "sourceY": 172.5,
+        "targetX": 2416,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "break",
+          "type": "BlockLoopBreakpoint",
+          "dimensions": {
+            "width": 192,
+            "height": 151
+          },
+          "computedPosition": {
+            "x": 7980,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "break-output-1",
+                "position": "right",
+                "nodeId": "break",
+                "type": "source",
+                "x": 200,
+                "y": 67.5,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "break-input-1",
+                "position": "left",
+                "nodeId": "break",
+                "type": "target",
+                "x": -24,
+                "y": 67.5,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 7980,
+            "y": 97
+          },
+          "data": {
+            "clearLoop": false,
+            "disableBlock": false,
+            "loopId": "rows",
+            "description": "Loop back"
+          },
+          "events": {},
+          "label": "loop-breakpoint"
+        },
+        "targetNode": {
+          "id": "loop",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 2432,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "loop-output-1",
+                "position": "right",
+                "nodeId": "loop",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "loop-input-1",
+                "position": "left",
+                "nodeId": "loop",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 2432,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "loopId": "rows",
+            "maxLoop": 0,
+            "toNumber": 10,
+            "fromNumber": 1,
+            "startIndex": 0,
+            "loopData": "[]",
+            "description": "Loop rows",
+            "variableName": "",
+            "referenceKey": "",
+            "reverseLoop": false,
+            "elementSelector": "",
+            "waitForSelector": false,
+            "waitSelectorTimeout": 5000,
+            "resumeLastWorkflow": false,
+            "loopThrough": "data-columns"
+          },
+          "events": {},
+          "label": "loop-data"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-backback-output-1-forwardforward-input-1",
+        "type": "custom",
+        "source": "back",
+        "target": "forward",
+        "sourceHandle": "back-output-1",
+        "targetHandle": "forward-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 8780,
+        "sourceY": 133,
+        "targetX": 8840,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "back",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 8564,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "back-output-1",
+                "position": "right",
+                "nodeId": "back",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "back-input-1",
+                "position": "left",
+                "nodeId": "back",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 8564,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Go back"
+          },
+          "events": {},
+          "label": "go-back"
+        },
+        "targetNode": {
+          "id": "forward",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 8856,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "forward-output-1",
+                "position": "right",
+                "nodeId": "forward",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "forward-input-1",
+                "position": "left",
+                "nodeId": "forward",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 8856,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Go forward"
+          },
+          "events": {},
+          "label": "forward-page"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-forwardforward-output-1-browserEventbrowserEvent-input-1",
+        "type": "custom",
+        "source": "forward",
+        "target": "browserEvent",
+        "sourceHandle": "forward-output-1",
+        "targetHandle": "browserEvent-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 9072,
+        "sourceY": 133,
+        "targetX": 9132,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "forward",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 8856,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "forward-output-1",
+                "position": "right",
+                "nodeId": "forward",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "forward-input-1",
+                "position": "left",
+                "nodeId": "forward",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 8856,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Go forward"
+          },
+          "events": {},
+          "label": "forward-page"
+        },
+        "targetNode": {
+          "id": "browserEvent",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 9148,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "browserEvent-output-1",
+                "position": "right",
+                "nodeId": "browserEvent",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "browserEvent-input-1",
+                "position": "left",
+                "nodeId": "browserEvent",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 9148,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Wait load",
+            "timeout": 10000,
+            "eventName": "tab:loaded",
+            "setAsActiveTab": true,
+            "activeTabLoaded": true,
+            "tabLoadedUrl": "",
+            "tabUrl": "",
+            "fileQuery": ""
+          },
+          "events": {},
+          "label": "browser-event"
+        },
+        "selected": true
+      },
+      {
+        "id": "vueflow__edge-browserEventbrowserEvent-output-1-exportexport-input-1",
+        "type": "custom",
+        "source": "browserEvent",
+        "target": "export",
+        "sourceHandle": "browserEvent-output-1",
+        "targetHandle": "export-input-1",
+        "updatable": true,
+        "selectable": true,
+        "data": {},
+        "events": {},
+        "class": "connected-edges",
+        "label": "",
+        "markerEnd": "arrowclosed",
+        "sourceX": 9364,
+        "sourceY": 133,
+        "targetX": 9424,
+        "targetY": 133,
+        "sourceNode": {
+          "id": "browserEvent",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 9148,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "browserEvent-output-1",
+                "position": "right",
+                "nodeId": "browserEvent",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "browserEvent-input-1",
+                "position": "left",
+                "nodeId": "browserEvent",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 9148,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "description": "Wait load",
+            "timeout": 10000,
+            "eventName": "tab:loaded",
+            "setAsActiveTab": true,
+            "activeTabLoaded": true,
+            "tabLoadedUrl": "",
+            "tabUrl": "",
+            "fileQuery": ""
+          },
+          "events": {},
+          "label": "browser-event"
+        },
+        "targetNode": {
+          "id": "export",
+          "type": "BlockBasic",
+          "dimensions": {
+            "width": 192,
+            "height": 72
+          },
+          "computedPosition": {
+            "x": 9440,
+            "y": 97,
+            "z": 1000
+          },
+          "handleBounds": {
+            "source": [
+              {
+                "id": "export-output-1",
+                "position": "right",
+                "nodeId": "export",
+                "type": "source",
+                "x": 200,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ],
+            "target": [
+              {
+                "id": "export-input-1",
+                "position": "left",
+                "nodeId": "export",
+                "type": "target",
+                "x": -24,
+                "y": 28,
+                "width": 16,
+                "height": 16
+              }
+            ]
+          },
+          "selected": true,
+          "dragging": false,
+          "resizing": false,
+          "initialized": false,
+          "isParent": false,
+          "position": {
+            "x": 9440,
+            "y": 97
+          },
+          "data": {
+            "disableBlock": false,
+            "name": "result",
+            "refKey": "",
+            "type": "json",
+            "description": "Export JSON",
+            "variableName": "",
+            "csvDelimiter": ",",
+            "addBOMHeader": true,
+            "onConflict": "uniquify",
+            "dataToExport": "data-columns"
+          },
+          "events": {},
+          "label": "export-data"
+        },
+        "selected": true
+      }
+    ]
+  }
+}
